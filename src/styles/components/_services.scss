@@ -33,7 +33,7 @@
 
   &::after {
     content: " ";
-    background-image: url(/Webpack-Simple-master/src/images/icons/search.svg);
+    background-image: url(/src/images/icons/search.svg);
     position: absolute;
     width: 24px;
     height: 24px;
@@ -69,11 +69,13 @@
     position: relative;
     
     &:not(:last-child) {
-      margin-right: 110px;
+      margin-right: 60px;
     }
   }
 
   &__link{
+    position: relative;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 26px;
@@ -84,12 +86,17 @@
 
 .services-cards{
   display: flex;
-  grid-gap:30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
+  grid-gap: 30px;
 }
 
 .services-card {
-  padding: 62px 30px 68px 30px;
+  padding: 30px 30px 30px 30px;
+  
+  height: 230px;
   width: 430px;
 
   border: 1px solid #E1EFFD;
@@ -98,7 +105,24 @@
 
   background: #FFFFFF;
 
+  &__top-card{
+    display: flex;
+    justify-content: space-between
+  }
+
+  &__img{
+        display: flex;
+          align-items: center;
+          justify-content: center;
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+    background-color: #F1F7FE;;
+  }
+
   &__title{
+    width: 206px;
     margin-bottom: 52px;
 
     font-weight: 700;
@@ -115,5 +139,15 @@
     
     color:$second-text-color;
   }
+
+}
+
+.upload-price__link{
+  display: flex;
+  align-items: center;
+}
+
+.upload-price__icon{
+  margin-right: 20px;
 }
 
