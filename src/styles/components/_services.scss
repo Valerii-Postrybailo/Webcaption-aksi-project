@@ -1,0 +1,119 @@
+.services{
+  padding-top: 81px;
+  padding-bottom: 81px;
+}
+
+.services__title{
+  margin-bottom: 40px;
+
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 40px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $main-color;
+}
+
+.search-form{
+  position: relative;
+  
+  margin: 0 auto 30px;
+  width: 300px;
+  height: 60px;
+
+  @media screen and(min-width:768px){
+    width: 700px;
+  }
+
+  @media screen and(min-width:1350px){
+    width: 890px;
+  }
+
+  &::after {
+    content: " ";
+    background-image: url(/Webpack-Simple-master/src/images/icons/search.svg);
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 30px;
+    top: 18px;
+  }
+
+  &__input{
+    padding: 19px 30px 19px 30px;
+    width: 100%;
+
+    font-family: 'Open Sans';
+
+    font-size: 16px;
+    line-height: 22px;
+    color: #999999;
+
+    background: #F1F7FE;
+    border-radius: 30px;
+    border: none;
+    outline: 0;
+
+  }
+}
+
+.upload-price{
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  &__item {
+    position: relative;
+    
+    &:not(:last-child) {
+      margin-right: 110px;
+    }
+  }
+
+  &__link{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    
+    color: $main-color;
+  }
+}
+
+.services-cards{
+  display: flex;
+  grid-gap:30px;
+
+}
+
+.services-card {
+  padding: 62px 30px 68px 30px;
+  width: 430px;
+
+  border: 1px solid #E1EFFD;
+   // box-shadow: 0px 5px 30px rgba(225, 239, 253, 0.8);
+  border-radius: 30px;
+
+  background: #FFFFFF;
+
+  &__title{
+    margin-bottom: 52px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    
+    color: $main-color;
+  }
+
+  &__text{
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 22px; 
+    
+    color:$second-text-color;
+  }
+}
+

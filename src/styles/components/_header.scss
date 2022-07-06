@@ -1,0 +1,271 @@
+// ------------ABOVE-HEADER-LINE---------------
+
+.header {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 160px;
+
+  background-color: $main-bg-color;
+
+  @media screen and (min-width:768px){
+    padding-top:200px ;
+    padding-bottom: 210px;
+  }
+
+  @media screen and (min-width:1350px){
+    padding-top: 300px;
+    padding-bottom: 310px;
+  }
+}
+
+.above-header-line{
+  padding-top:8px;
+  padding-bottom: 8px;
+
+  background-color: $main-color;
+
+  &__container{
+    display: flex;
+  }
+}
+
+.messengers-list{
+  display:flex;
+  margin-left:auto;
+
+  &__item:not(:last-child){
+      margin-right: 10px;
+    }
+
+  &__link{
+    display:flex ;
+  }
+
+  &__icon{
+    fill: #ffff;
+    &:hover{
+      fill: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+/*----------HEADER--------------*/ 
+
+.header-logo{
+  margin-right: auto;
+}
+
+.classic-header-part{
+  position: absolute;
+  top: 30px;
+  
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media screen and(min-width:768px){
+    width: 768px;
+  }
+
+  @media screen and(min-width:1350px){
+    width: 1350px;
+  }
+  
+}
+
+.nav{
+  display: none;
+
+  @media screen and(min-width:1350px){
+    display: block;
+
+    margin-right: 52px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__list-link {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+  
+      color: $main-color;
+    }
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  &__icon{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.tel-list{
+  display: none;
+
+  @media screen and (min-width:768px){
+    display: flex;
+    margin-left: 52px;
+  }
+  
+
+  &__link{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+    
+  color: $main-color;
+
+  }
+}
+
+//-------------HERO------------
+
+.hero-main-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  @media screen and(min-width:768px){
+    width: 545px;
+  }
+  
+  &__title{
+    margin-bottom: 20px;
+
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    
+    color: $main-color;
+  }
+
+  &__text{
+    margin-bottom: 30px;
+
+    font-family: 'Open Sans';
+      font-style: normal;
+      font-size: 18px;
+      line-height: 30px;
+    
+      color: $second-text-color;
+  }
+
+  &__button{
+    padding: 15px 74px 15px 74px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: $main-color;
+
+    border: 2px solid #094581;
+    border-radius: 30px;
+
+    background-color: transparent;
+
+    &:hover{
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    }
+  }
+}
+
+.hero-part{
+  position: relative;
+}
+
+.hero-picture__first{
+  display: none;
+
+  @media screen and(min-width:1350px){
+    position: absolute;
+    z-index: 2;
+
+    display: block;
+    
+    left: 632px;
+    top: -72px;
+  }
+}
+
+.hero-picture__second{
+    position: absolute;
+    z-index: 1;
+
+    display: none;
+
+    left: 550px;
+    top: -60px;
+
+  @media screen and (min-width:768px){
+    display: block;
+  }
+
+  @media screen and (min-width:1350px){
+      top: -60px;
+      left: 1085px;
+  }
+}
+
+.hero-picture__round{
+  display: none;
+
+  @media screen and (min-width:1350px){
+    position: absolute;
+    display: block;
+
+    left: 730px;
+    top: -142px;
+  } 
+}
+
+
+.menu-open-btn{
+  display: block;
+  display: flex;
+  padding: 0;
+  margin-left: 27px;
+
+  border: none;
+
+  background-color: transparent;
+
+  @media screen and (min-width:1350px){
+    display: none;
+  }
+
+  &__burger-menu{
+  fill: $main-color;
+  }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+
+  <body>
+    <div class="above-header-line">
+      <div class="container above-header-line__container">
+        <ul class="messengers-list">
+          <li class="messengers-list__item">
+            <a class="messengers-list__link" href=" ">
+              <svg class="messengers-list__icon" width="20" height="20">
+                <use href="images/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="messengers-list__item">
+            <a class="messengers-list__link" href="">
+              <svg class="messengers-list__icon" width="20" height="20">
+                <use href="images/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="messengers-list__item">
+            <a class="messengers-list__link" href="">
+              <svg class="messengers-list__icon" width="20" height="20">
+                <use href="images/symbol-defs.svg#icon-viber"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="messengers-list__item">
+            <a class="messengers-list__link" href="">
+              <svg class="messengers-list__icon" width="20" height="20">
+                <use href="images/symbol-defs.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="classic-header-part">
+          <a class="header-logo" href="">
+            <img src="./images/logo/header-logo.png" alt="Лого сайту" />
+          </a>
+
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="">Послуги</a>
+              </li>
+
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="">Відгуки</a>
+              </li>
+
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="">Часті питання</a>
+              </li>
+
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="language-button" type="button">
+            <svg class="language-button__icon" width="30" height="30">
+              <use href="./images/symbol-defs.svg#icon-ukraine"></use>
+            </svg>
+          </button>
+
+          <ul class="tel-list">
+            <li>
+              <a class="tel-list__link" href="tel:+38 063 291-39-11"
+                >+38 063 291-39-11 /</a
+              >
+            </li>
+
+            <li>
+              <a class="tel-list__link" href="tel:+38 097 928-85-57"
+                >+38 097 928-85-57</a
+              >
+            </li>
+          </ul>
+
+          <button type="button" class="menu-open-btn">
+            <svg
+              class="menu-open-btn__burger-menu"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню "
+            >
+              <use href="./images/symbol-defs.svg#mobile-burger-menu"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="hero-part">
+          <div class="hero-main-info">
+            <h1 class="hero-main-info__title">ХІМЧИСТКА — ПРАЛЬНЯ AKSI</h1>
+            <p class="hero-main-info__text">
+              Чистка одягу, прання білизни, весільних суконь, подушок всього за
+              декілька кліків. Новий підхід у догляді за вашими речами, ми
+              використовуємо сучасне німецьке обладнання та препарати.
+            </p>
+            <button class="hero-main-info__button" type="button">
+              ЗАМОВИТИ
+            </button>
+          </div>
+
+          <div class="hero-picture__first">
+            <picture>
+              <img src="./images/header/first-img.png" />
+            </picture>
+          </div>
+
+          <div class="hero-picture__second">
+            <picture>
+              <img src="./images/header/second-img.png" />
+            </picture>
+          </div>
+
+          <div class="hero-picture__round">
+            <picture>
+              <img src="./images/header/round.png" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="services">
+      <div class="container">
+        <h2 class="services__title">Ціни та послуги</h2>
+
+        <form class="search-form">
+          <input
+            class="search-form__input"
+            type="search"
+            name="search"
+            placeholder="Введіть для пошуку..."
+          />
+        </form>
+
+        <ul class="upload-price">
+          <li class="upload-price__item">
+            <svg class="upload-price__icon" width="30" height="30">
+              <use href="./images/symbol-defs.svg#icon-xls"></use>
+            </svg>
+            <a class="upload-price__link"> ЗАВАНТАЖИТИ XLSX ПРАЙС </a>
+          </li>
+
+          <li class="upload-price__item">
+            <a class="upload-price__link">
+              <svg class="upload-price__icon" width="30" height="30">
+                <use href="./images/symbol-defs.svg#icon-pdf"></use>
+              </svg>
+              ЗАВАНТАЖИТИ PDF ПРАЙС
+            </a>
+          </li>
+        </ul>
+
+        <ul class="services-cards">
+          <li class="services-card">
+            <h3 class="services-card__title">
+              Чистка одягу та текстильних виробів
+            </h3>
+            <p class="services-card__text">
+              Сукня весільна проста/ складна - 900.00/1050.00 грн.
+            </p>
+            <a class="services-card__link">розгорнути прайс</a>
+          </li>
+
+          <li class="services-card">
+            <h3 class="services-card__title">Прання білизни</h3>
+            <p class="services-card__text">Постільна білизна - 30.00 грн.</p>
+            <a class="services-card__link" href="">розгорнути прайс</a>
+          </li>
+
+          <li class="services-card">
+            <h3 class="services-card__title">Прасування</h3>
+            <p class="services-card__text">
+              Постільна білизна/постільна білизна з крохмал. - 20.00 грн.
+            </p>
+            <a class="services-card__link" href="">розгорнути прайс</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+body {
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+}
+
+
+.container {
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @media screen and (min-width: 320px) {
+    min-width: 320px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width:1350px) {
+    width: 1350px;
+  }
+}
+
