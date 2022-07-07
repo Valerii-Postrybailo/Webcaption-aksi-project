@@ -156,6 +156,10 @@
   @media screen and(min-width:768px){
     width: 545px;
   }
+
+  @media screen and (min-width:1350px){
+    display: block;
+  }
   
   &__title{
     margin-bottom: 20px;
@@ -172,11 +176,11 @@
     margin-bottom: 30px;
 
     font-family: 'Open Sans';
-      font-style: normal;
-      font-size: 18px;
-      line-height: 30px;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px;
     
-      color: $second-text-color;
+    color: $second-text-color;
   }
 
   &__button{
