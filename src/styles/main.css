@@ -623,7 +623,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .response-card {
   margin-left: 30px;
   margin-top: 30px;
-  padding: 30px 30px 74px 30px;
   border: 1px solid #E1EFFD;
   border-radius: 30px;
 }
@@ -640,6 +639,18 @@ input[type="search"]::-webkit-search-results-decoration {
     -ms-flex-preferred-size: calc(100% / 3 - 30px);
         flex-basis: calc(100% / 3 - 30px);
   }
+}
+
+.response-card__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 30px 30px 74px 30px;
 }
 
 .response-card__top-card {
