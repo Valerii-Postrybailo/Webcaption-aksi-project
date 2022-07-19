@@ -105,6 +105,8 @@
 }
 
 .services-card {
+  position: relative;
+
       margin-left: 30px;
         margin-top: 30px;
   padding: 30px 30px 30px 30px;
@@ -170,16 +172,40 @@
     color:$second-text-color;
   }
 
-  &__link{
-    display: none;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+  
+}
 
-    text-transform: uppercase;
-    
-    color: #0F97D8;
-  }
+.services-card__hidden-link {
+  
+  position: absolute;
+  width: 100%;
+  height: 45px;
+
+  left: 0;
+  bottom: 0%;
+  background-color: red;
+  opacity: 0.3;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  &__link {
+  
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+  
+      text-transform: uppercase;
+  
+      color: #0F97D8;
+    }
+
+  
+}
+
+.services-card:hover .services-card__hidden-link{
+  transform: translateY(30px);
+  display: block;
+  box-shadow: 0px 5px 30px rgba(225, 239, 253, 0.8);
 }
 
 .upload-price__link{

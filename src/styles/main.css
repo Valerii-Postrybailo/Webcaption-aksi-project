@@ -496,6 +496,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .services-card {
+  position: relative;
   margin-left: 30px;
   margin-top: 30px;
   padding: 30px 30px 30px 30px;
@@ -570,13 +571,32 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #333333;
 }
 
-.services-card__link {
-  display: none;
+.services-card__hidden-link {
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  left: 0;
+  bottom: 0%;
+  background-color: red;
+  opacity: 0.3;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.services-card__hidden-link__link {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #0F97D8;
+}
+
+.services-card:hover .services-card__hidden-link {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  display: block;
+  -webkit-box-shadow: 0px 5px 30px rgba(225, 239, 253, 0.8);
+          box-shadow: 0px 5px 30px rgba(225, 239, 253, 0.8);
 }
 
 .upload-price__link {
@@ -621,9 +641,10 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .response-card {
+  height: 260px;
   margin-left: 30px;
   margin-top: 30px;
-  border: 1px solid #E1EFFD;
+  border: 1px solid #e1effd;
   border-radius: 30px;
 }
 
@@ -649,8 +670,8 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
-  padding: 30px 30px 74px 30px;
+  height: 250px;
+  padding: 30px 30px 0px 30px;
 }
 
 .response-card__top-card {
@@ -673,13 +694,28 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .response-card__date {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   /* identical to box height */
   color: #999999;
+}
+
+.response-card__com-window {
+  width: 100%;
+  height: 95px;
+  overflow-y: auto;
+}
+
+.response-card__com-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
 }
 
 .response-card__reviers-info {
