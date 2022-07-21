@@ -598,7 +598,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .services-card__link {
-  display: none;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -610,10 +609,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .services-card__footer {
   position: absolute;
-  top: calc(100% - var(--bdrs));
+  top: 100%;
   left: 0;
   width: 100%;
-  padding: 30px;
+  height: 53px;
   background-color: inherit;
   border-radius: 0 0 var(--bdrs) var(--bdrs);
   -webkit-transform: translateY(-100%);
@@ -629,8 +628,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .services-card:hover .services-card__footer {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
 }
 
 .services-card:hover .services-card__hidden-link {
