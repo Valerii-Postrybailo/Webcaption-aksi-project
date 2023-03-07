@@ -23,11 +23,11 @@
   width: 300px;
   height: 60px;
 
-  @media screen and(min-width:768px){
+  @media screen and (min-width:768px){
     width: 700px;
   }
 
-  @media screen and(min-width:1350px){
+  @media screen and (min-width:1350px){
     width: 890px;
   }
 
@@ -106,7 +106,6 @@
 
 .services-card {
   --transition-dur: 250ms;
-  --bdrs: 30px;
   position: relative;
   z-index: 0;
   transition: z-index var(--transition-dur) step-end;
@@ -114,22 +113,13 @@
 
   margin-left: 30px;
   margin-top: 30px;
-  // padding: 30px 30px 30px 30px;
 
-  // height: 230px;
-  // width: 100%;
-
-  // border: 1px solid #E1EFFD;
-
-  // border-radius: 30px;
-
-  // background: #FFFFFF;
   &:hover,
-    &:focus {
-      // box-shadow: 0px 5px 30px rgba(225, 239, 253, 0.8);
-      z-index: 1;
-      transition-timing-function: step-start;
-    }
+  &:focus {
+  
+    z-index: 1;
+    transition-timing-function: step-start;
+  }
 
   &__body {
       padding: 30px 30px 30px 30px;
@@ -137,6 +127,12 @@
       width: 100%;
       border-radius: 30px;
       background-color:white;
+
+      &:hover,
+      &:focus{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
   }
 
   @media screen and (min-width: 768px) {
@@ -189,61 +185,55 @@
 .services-card__hidden-link {
   position: absolute;
   inset: 0;
-  // width: 100%;
-  // height: 45px;
+
   transition: filter var(--transition-dur);
-  border-radius: var(--bdrs);
   filter: drop-shadow(0 0 1px #02a7);
   z-index: -1;
 
-  // left: 0;
-  // bottom: 0%;
   background-color: white;
-  // opacity: 0.3;
-  // border-bottom-right-radius: 30px;
-  // border-bottom-left-radius: 30px;
 }
 
 
 .services-card__link {
-  // display: none;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+  position: absolute;
+  bottom: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
   
-    text-transform: uppercase;
-    
-    color: #0F97D8;
+  text-transform: uppercase;
+  color: #0F97D8;
   transition: 25000ms;
 }
-
-// .services-card__link:hover
-
 
 .services-card__footer {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  height: 53px;
+  height: 30px;
   background-color: inherit;
-  border-radius: 0 0 var(--bdrs) var(--bdrs);
   transform: translateY(-100%);
   transition: transform var(--transition-dur);
+
+  &:hover,
+  &:focus{
+    transform: translateY(0px);
+  }
 }
 
 .services-card:hover .services-card__link {
   display: block;
+
 }
 
 
 .services-card:hover .services-card__footer {
-  transform: translateY(-25px);
+  transform: translateY(0px);
 }
 
 .services-card:hover .services-card__hidden-link{
   filter: drop-shadow(0 0 8px #02a7);
-  // box-shadow: 0px 5px 30px rgba(225, 239, 253, 0.8);
 }
 
 .upload-price__link{

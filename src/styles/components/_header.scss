@@ -63,11 +63,11 @@
   align-items: center;
   width: 100%;
 
-  @media screen and(min-width:768px){
+  @media screen and (min-width:768px){
     width: 768px;
   }
 
-  @media screen and(min-width:1350px){
+  @media screen and (min-width:1350px){
     width: 1350px;
   }
   
@@ -76,7 +76,7 @@
 .nav{
   display: none;
 
-  @media screen and(min-width:1350px){
+  @media screen and (min-width:1350px){
     display: block;
 
     margin-right: 52px;
@@ -153,7 +153,7 @@
 
   width: 100%;
 
-  @media screen and(min-width:768px){
+  @media screen and (min-width:768px){
     width: 545px;
   }
 
@@ -214,7 +214,7 @@
 .hero-picture__first{
   display: none;
 
-  @media screen and(min-width:1350px){
+  @media screen and (min-width:1350px){
     position: absolute;
     z-index: 2;
 

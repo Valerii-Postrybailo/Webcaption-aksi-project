@@ -7,6 +7,7 @@ $(function () {
     slidesToShow: 3,
     slidesToScroll: 2,
 
+
     responsive: [
       {
         breakpoint: 1350,
