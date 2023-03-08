@@ -3,6 +3,16 @@ body {
   font-family: "Raleway", "Open Sans", sans-serif;
 }
 
+.container h2 {
+  margin-bottom: 40px;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #094581;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -319,16 +329,6 @@ input[type=search]::-webkit-search-results-decoration {
   padding-bottom: 81px;
 }
 
-.services__title {
-  margin-bottom: 40px;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #094581;
-}
-
 .search-form {
   position: relative;
   margin: 0 auto 30px;
@@ -531,7 +531,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .reviews {
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 280px;
 }
 .reviews__title {
   margin-bottom: 40px;
@@ -613,4 +613,87 @@ input[type=search]::-webkit-search-results-decoration {
 
 .response-card__reviers-info {
   margin-left: 20px;
+}
+
+.faq-section {
+  position: relative;
+  padding-bottom: 44px;
+  background-color: #F1F7FE;
+}
+.faq-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(100% - 0px);
+  width: 100%;
+  height: 180px;
+  background-image: url("/src/images/backing.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.faq {
+  width: 100%;
+  background-color: #F1F7FE;
+}
+
+.faq-item {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+}
+.faq-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.faq-title {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 20px 0px 20px 30px;
+}
+.faq-title::after {
+  content: " ";
+  background-image: url("/src/images/arrow.svg");
+  position: absolute;
+  right: 22px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  transform: rotate(0deg);
+}
+
+.faq-input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+.faq-input:checked ~ .faq-text {
+  display: block;
+}
+
+.faq-text {
+  display: none;
+  padding: 0px 30px 34px 30px;
+}
+
+.faq-input:checked ~ .faq-title:after {
+  content: " ";
+  background-image: url("/src/images/arrow.svg");
+  position: absolute;
+  right: 22px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+}
+
+#map {
+  width: 100%;
+  height: 500px;
 }/*# sourceMappingURL=main.css.map */

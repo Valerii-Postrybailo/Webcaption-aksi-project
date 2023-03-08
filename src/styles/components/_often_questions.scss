@@ -1,0 +1,96 @@
+.faq-section{
+  position: relative;
+
+  padding-bottom: 44px;
+
+  background-color: #F1F7FE;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: calc(100% - 0px);
+
+    width: 100%;
+    height: 180px;
+
+    background-image: url('/src/images/backing.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+};
+
+.faq{
+  width:100%;
+
+  background-color: #F1F7FE;
+};
+
+.faq-item{
+  width: 100%;
+
+  background-color: #FFFFFF;
+  border-radius: 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+};
+
+.faq-title{
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  padding: 20px 0px 20px 30px;
+
+  &::after {
+      content:" ";
+      background-image: url("/src/images/arrow.svg");
+      
+      position: absolute;
+      right: 22px;
+
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+
+      transform: rotate(0deg);
+    }
+};
+
+
+.faq-input{
+  width:0;
+  height: 0;
+
+  position: absolute;
+
+  -webkit-appearance: none;
+  appearance: none;
+};
+
+.faq-input:checked ~ .faq-text{
+  display: block;
+};
+
+.faq-text{
+  display: none;
+  padding: 0px 30px 34px 30px;
+};
+
+.faq-input:checked ~ .faq-title:after{
+  content: " ";
+    background-image: url("/src/images/arrow.svg");
+  
+    position: absolute;
+    right: 22px;
+  
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  
+    transform: rotate(180deg);
+}
