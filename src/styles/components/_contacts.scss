@@ -1,4 +1,93 @@
-#map{
-  width: 100%;
+.map__google-map-container{
   height: 500px;
 }
+
+.map__map-title{
+  text-align: center;
+
+  padding: 5px 0 10px 0;
+
+  font-size: 14px;
+  line-height: calc(20/14);
+
+  color: $secondary-text-color;
+}
+
+.address-btn-list{
+  position: relative;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-bottom: 100px;
+
+  &::after {
+      position: absolute;
+  
+      content: "";
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color:$main-bg-color;
+  
+    }
+}
+
+.address-btn{  
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 0 20px 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30/16);
+  
+  border: none;
+
+  color: $main-color;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  
+
+  &:hover{
+    color: $hover-color;
+
+    &::after {
+      position: absolute;
+    
+      content: "";
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $hover-color;
+    
+      }
+  }
+
+  &__img{
+    margin-right: 10px;
+  }
+
+  &--active{
+    color: $hover-color;
+    
+    &::after {
+      position: absolute;
+    
+      content: "";
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $hover-color;
+    }
+  }
+}
+
+
+

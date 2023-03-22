@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: "Raleway", "Open Sans", sans-serif;
+  font-weight: 400;
 }
 
 .container h2 {
@@ -82,6 +83,21 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
+/*-------------------HIDDEN-TITLES----------------*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .header {
   position: relative;
   padding-top: 150px;
@@ -119,12 +135,14 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .messengers-list__link {
   display: flex;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .messengers-list__icon {
   fill: white;
+  transition: transform 250ms;
 }
 .messengers-list__icon:hover {
-  fill: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
 }
 
 /*----------HEADER--------------*/
@@ -533,15 +551,6 @@ input[type=search]::-webkit-search-results-decoration {
   padding-top: 40px;
   padding-bottom: 280px;
 }
-.reviews__title {
-  margin-bottom: 40px;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #094581;
-}
 
 .reviews__list {
   margin-left: -30px;
@@ -640,7 +649,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .faq-item {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: white;
   border-radius: 30px;
 }
 .faq-item:not(:last-child) {
@@ -693,7 +702,69 @@ input[type=search]::-webkit-search-results-decoration {
   transform: rotate(180deg);
 }
 
-#map {
-  width: 100%;
+.map__google-map-container {
   height: 500px;
+}
+
+.map__map-title {
+  text-align: center;
+  padding: 5px 0 10px 0;
+  font-size: 14px;
+  line-height: 1.4285714286;
+  color: #999999;
+}
+
+.address-btn-list {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+.address-btn-list::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #F1F7FE;
+}
+
+.address-btn {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  border: none;
+  color: #094581;
+  background-color: transparent;
+  cursor: pointer;
+}
+.address-btn:hover {
+  color: #0F97D8;
+}
+.address-btn:hover::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0F97D8;
+}
+.address-btn__img {
+  margin-right: 10px;
+}
+.address-btn--active {
+  color: #0F97D8;
+}
+.address-btn--active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0F97D8;
 }/*# sourceMappingURL=main.css.map */

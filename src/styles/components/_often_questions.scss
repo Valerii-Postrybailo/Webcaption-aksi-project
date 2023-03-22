@@ -3,7 +3,7 @@
 
   padding-bottom: 44px;
 
-  background-color: #F1F7FE;
+  background-color: $main-bg-color;
 
   &::before{
     content: "";
@@ -24,13 +24,13 @@
 .faq{
   width:100%;
 
-  background-color: #F1F7FE;
+  background-color: $main-bg-color;
 };
 
 .faq-item{
   width: 100%;
 
-  background-color: #FFFFFF;
+  background-color: $main-white-color;
   border-radius: 30px;
 
   &:not(:last-child) {

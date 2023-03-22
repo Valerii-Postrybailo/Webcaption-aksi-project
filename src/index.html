@@ -607,14 +607,63 @@
   </section>
 
   <section class="contacts">
-    <div class="container">
-    <div id="map"></div>
+    <div class="map">
+      <div class="map__google-map-container">
+        <iframe class="map__google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10421.345179964452!2d28.496456463716857!3d49.232112945808254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b6a77922847%3A0xe9f11d7b1f81923d!2z0KXRltC80YfQuNGB0YLQutCwIEFLU0k!5e0!3m2!1suk!2sua!4v1679474269117!5m2!1suk!2sua"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <p class="map__map-title">
+        Головне відділення
+      </p>
     </div>
+      
+      <div class="container">
+        <ul class="address-btn-list">
+          <li class="address-btn-list__item">
+            <button class="address-btn map-btn-1">
+              <img class="address-btn__img" src="./images/icons/sign-min.svg" width="30" height="30"> 
+              Скалецького, 7 
+            </button>
+          </li>
+
+          <li class="address-btn-list__item">
+            <button class="address-btn map-btn-2" > 
+              <img class="address-btn__img" src="./images/icons/sign-min.svg" width="30" height="30"> 
+              Воїнів-інтернаціоналістів, 14А 
+            </button>
+          </li>
+
+          <li class="address-btn-list__item">
+            <button class="address-btn address-btn--active map-btn-3" >  
+              <img class="address-btn__img" src="./images/icons/sign-min.svg" width="30" height="30"> 
+              Замостянська, 33
+            </button>
+          </li>
+
+          <li class="address-btn-list__item">
+            <button class="address-btn map-btn-4">
+              <img class="address-btn__img" src="./images/icons/sign-min.svg" width="30" height="30"> 
+              Келецька, 45а 
+          </li>
+
+          <li class="address-btn-list__item">
+            <button class="address-btn map-btn-5"> 
+              <img class="address-btn__img" src="./images/icons/sign-min.svg" width="30" height="30"> 
+              Жмеринка, вул. Франка, 2
+            </button>
+          </li>
+        </ul>
+
+      </div>
   </section>
 
   <script src="./libs/jquery/jquery.min.js"></script>
   <script src="./libs/slick-1.8.1/slick/slick.min.js"></script>
   <script src="./libs/main.js"></script>
+  <script src="./map.js"></script>
 
 </body>
 

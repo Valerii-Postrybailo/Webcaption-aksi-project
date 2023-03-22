@@ -36,9 +36,9 @@
 
     font-size: 16px;
     line-height: 22px;
-    color: #999999;
+    color: $secondary-text-color;
 
-    background: #F1F7FE;
+    background: $main-bg-color;
     border-radius: 30px;
     border: none;
     outline: 0;
@@ -113,7 +113,7 @@
       height: 230px;
       width: 100%;
       border-radius: 30px;
-      background-color:white;
+      background-color:$main-white-color;
 
       &:hover,
       &:focus{
@@ -137,14 +137,14 @@
   }
 
   &__img{
-        display: flex;
-          align-items: center;
-          justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90px;
     height: 90px;
 
     border-radius: 50%;
-    background-color: #F1F7FE;;
+    background-color: $main-bg-color;
   }
 
   &__title{
@@ -165,7 +165,7 @@
     font-size: 16px;
     line-height: 22px; 
     
-    color:$second-text-color;
+    color:$main-text-color;
   }
 }
 
@@ -177,7 +177,7 @@
   filter: drop-shadow(0 0 1px #02a7);
   z-index: -1;
 
-  background-color: white;
+  background-color:$main-white-color;
 }
 
 
@@ -189,7 +189,7 @@
   line-height: 20px;
   
   text-transform: uppercase;
-  color: #0F97D8;
+  color: $hover-color;
   transition: 25000ms;
 }
 
