@@ -767,4 +767,57 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
   height: 2px;
   background-color: #0F97D8;
+}
+
+.address {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 145px;
+}
+
+.location-box {
+  display: flex;
+}
+.location-box:not(:last-child) {
+  margin-right: 70px;
+}
+
+.location-box__img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: #F1F7FE;
+}
+
+.location-box__address-block-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: cals(16/25);
+  color: #333333;
+}
+
+.location-box__address-block-text {
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 0.64;
+  color: #333333;
+}
+.location-box__address-block-text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.location-box__address-block-data {
+  margin-right: 20px;
+}
+
+.address-text, .first-phone-number, .second-phone-number {
+  display: block;
+}
+.address-text:hover, .first-phone-number:hover, .second-phone-number:hover {
+  color: #0F97D8;
 }/*# sourceMappingURL=main.css.map */
