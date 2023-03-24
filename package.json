@@ -1,5 +1,5 @@
 {
-  "name": "Webcaption-aksi-project",
+  "name": "name",
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve --env develop"
