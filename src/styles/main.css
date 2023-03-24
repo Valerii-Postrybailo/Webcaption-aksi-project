@@ -815,9 +815,13 @@ input[type=search]::-webkit-search-results-decoration {
   margin-right: 20px;
 }
 
-.address-text, .first-phone-number, .second-phone-number {
+.address-text,
+.first-phone-number,
+.second-phone-number {
   display: block;
 }
-.address-text:hover, .first-phone-number:hover, .second-phone-number:hover {
+.address-text:hover,
+.first-phone-number:hover,
+.second-phone-number:hover {
   color: #0F97D8;
 }/*# sourceMappingURL=main.css.map */
