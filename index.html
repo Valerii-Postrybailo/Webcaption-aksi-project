@@ -1,12 +1,731 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>AKSI</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+    crossorigin="anonymous" >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+  <link rel="stylesheet" href="./src/libs/slick-1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="./src/libs/slick-1.8.1/slick/slick-theme.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700;900&display=swap"
+    rel="stylesheet" >
+  <link rel="stylesheet" href="./src/styles/main.css" >
 </head>
+
 <body>
-  Hello
+  <div class="above-header-line">
+    <div class="container above-header-line__container">
+      <ul class="messengers-list">
+        <li class="messengers-list__item">
+          <a class="messengers-list__link" href=" ">
+            <svg class="messengers-list__icon" width="20" height="20">
+              <use href="./src/images/symbol-defs.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="messengers-list__item">
+          <a class="messengers-list__link" href="">
+            <svg class="messengers-list__icon" width="20" height="20">
+              <use href="./src/images/symbol-defs.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="messengers-list__item">
+          <a class="messengers-list__link" href="">
+            <svg class="messengers-list__icon" width="20" height="20">
+              <use href="./src/images/symbol-defs.svg#icon-viber"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="messengers-list__item">
+          <a class="messengers-list__link" href="">
+            <svg class="messengers-list__icon" width="20" height="20">
+              <use href="./src/images/symbol-defs.svg#icon-telegram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="classic-header-part">
+        <a class="header-logo" href="">
+          <img src="./src/images/logo/header-logo.png" alt="Лого сайту">
+        </a>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="">Послуги</a>
+            </li>
+
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="">Відгуки</a>
+            </li>
+
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="">Часті питання</a>
+            </li>
+
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="language-button" type="button">
+          <svg class="language-button__icon" width="30" height="30">
+            <use href="./src/images/symbol-defs.svg#icon-ukraine"></use>
+          </svg>
+        </button>
+
+        <ul class="tel-list">
+          <li>
+            <a class="tel-list__link" href="tel:+38063291-39-11">+38 063 291-39-11 /</a>
+          </li>
+
+          <li>
+            <a class="tel-list__link" href="tel:+38097928-85-57">+38 097 928-85-57</a>
+          </li>
+        </ul>
+
+        <button type="button" class="menu-open-btn">
+          <svg class="menu-open-btn__burger-menu" width="40" height="40" aria-label="Переключатель мобильного меню ">
+            <use href="./src/images/symbol-defs.svg#mobile-burger-menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hero-part">
+        <div class="hero-main-info">
+          <h1 class="hero-main-info__title">ХІМЧИСТКА — ПРАЛЬНЯ AKSI</h1>
+          <p class="hero-main-info__text">
+            Чистка одягу, прання білизни, весільних суконь, подушок всього за
+            декілька кліків. Новий підхід у догляді за вашими речами, ми
+            використовуємо сучасне німецьке обладнання та препарати.
+          </p>
+          <button class="hero-main-info__button" type="button">
+            ЗАМОВИТИ
+          </button>
+        </div>
+
+        <div class="hero-picture__first">
+          <picture>
+            <img src="./src/images/header/first-img.png" />
+          </picture>
+        </div>
+
+        <div class="hero-picture__second">
+          <picture>
+            <img src="./src/images/header/second-img.png" />
+          </picture>
+        </div>
+
+        <div class="hero-picture__round">
+          <picture>
+            <img src="./src/images/header/round.png" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="services">
+    <div class="container">
+      <h2 class="services__title">Ціни та послуги</h2>
+
+      <form class="search-form">
+        <input class="search-form__input" type="search" name="search" placeholder="Введіть для пошуку..." />
+      </form>
+
+      <ul class="upload-price">
+        <li class="upload-price__item">
+          <a class="upload-price__link" href="">
+            <svg class="upload-price__icon" width="30" height="30">
+              <use href="./src/images/symbol-defs.svg#icon-xls"></use>
+            </svg>
+            ЗАВАНТАЖИТИ XLSX ПРАЙС
+          </a>
+        </li>
+
+        <li class="upload-price__item">
+          <a class="upload-price__link" href="">
+            <svg class="upload-price__icon" width="30" height="30">
+              <use href="./src/images/symbol-defs.svg#icon-pdf"></use>
+            </svg>
+            ЗАВАНТАЖИТИ PDF ПРАЙС
+          </a>
+        </li>
+      </ul>
+
+      <ul class="services-cards">
+        <li class="services-card">
+          <div class="services-card__body">
+
+            <div class="services-card__top-card">
+
+              <h3 class="services-card__title">
+                Чистка одягу та текстильних виробів
+              </h3>
+
+              <div class="services-card__img">
+                <svg width="50" height="50">
+                  <use href="./src/images/symbol-defs.svg#icon-clean-clothes "></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="services-card__text">
+              <p class="services-card__text">
+                Сукня весільна проста/ складна - 900.00/1050.00 грн.
+              </p>
+            </div>
+
+            
+            <a class="services-card__link" href="#!">розгорнути прайс</a>
+          
+            <div class="services-card__footer"></div>
+
+          </div>
+
+          <div class="services-card__hidden-link">
+            <div class="services-card__footer">
+            </div>
+          </div>
+        </li>
+
+        <li class="services-card">
+          <div class="services-card__body">
+
+            <div class="services-card__top-card">
+              <h3 class="services-card__title">Прання білизни</h3>
+              <div class="services-card__img">
+                <svg width="50" height="50">
+                  <use href="./src/images/symbol-defs.svg#icon-washing-machine "></use>
+                </svg>
+              </div>
+            </div>
+
+            <p class="services-card__text">Постільна білизна - 30.00 грн.</p>
+
+            <a class="services-card__link" href="#!">розгорнути прайс</a>
+
+            <div class="services-card__footer"></div>
+
+          </div>
+
+          <div class="services-card__hidden-link">
+            <div class="services-card__footer"></div>
+          </div>
+        </li>
+
+        <li class="services-card">
+          <div class="services-card__body">
+            <div class="services-card__top-card">
+              <h3 class="services-card__title">Прасування</h3>
+              <div class="services-card__img">
+                <svg width="50" height="50">
+                  <use href="./src/images/symbol-defs.svg#icon-iron"></use>
+                </svg>
+              </div>
+            </div>
+
+            <p class="services-card__text">
+              Постільна білизна/постільна білизна з крохмал. - 20.00 грн.
+            </p>
+
+            <a class="services-card__link" href="#!">розгорнути прайс</a>
+
+
+            <div>
+              <div class="services-card__hidden-link">
+                <a class="services-card__link"></a>
+              </div>
+            </div>
+
+            <div class="services-card__footer">
+              <a class="services-card__link"></a>
+            </div>
+          </div>
+
+          <div class="services-card__hidden-link">
+            <div class="services-card__footer"></div>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container">
+      <h2 class="reviews__title">Відгуки про нас</h2>
+      <ul class="reviews__list reviews-list " data-slick>
+        <!-- ='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":true }' -->
+
+        <li class="reviews-list__item response-card">
+          <a class="response-card__link" href="#!">
+            <div class="response-card__top-card">
+
+
+              <div>
+                <img src="./src/images\reviews\Sveta.jpg" alt="">
+              </div>
+
+              <div class="response-card__reviers-info">
+                <h3 class="response-card__title">Света Светланова</h3>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <time class="response-card__date" datetime="2022-11-14">14 листопада</time>
+              </div>
+            </div>
+
+            <div class="response-card__com-window">
+              <p claas="response-card__com-text">
+                Здавала пальто,гарно почистили,персонал привітливий,ввічливий,ціна за чистку для мене приємлива,я
+                задоволена,буду
+                звертатися тільки сюди.
+              </p>
+            </div>
+          </a>
+        </li>
+
+        <li class="reviews-list__item response-card">
+          <a class="response-card__link" href="#!">
+            <div class="response-card__top-card">
+              <img src="./src/images\reviews\Volodimir.jpg" alt="">
+              <div class="response-card__reviers-info">
+                <h3 class="response-card__title">Владимир Постоловский</h3>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+
+                <time class="response-card__date" datetime="2022-11-14">14 листопада</time>
+              </div>
+            </div>
+
+            <div class="response-card__com-window">
+              <p claas="response-card__com-text">
+                Здавав військову форму з плямою від ручки, інші хімчистки відмовили. Почистили гарно, жодної плями не
+                лишилося. Дякую!
+              </p>
+            </div>
+          </a>
+        </li>
+
+
+        <li class="reviews-list__item response-card">
+          <a class="response-card__link" href="#!">
+            <div class="response-card__top-card">
+              <img src="./src/images\reviews\Natalya.jpg" alt="">
+              <div class="response-card__reviers-info">
+                <h3 class="response-card__title">Natalya Sobol</h3>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+
+                <time class="response-card__date" datetime="2022-11-14">14 листопада</time>
+              </div>
+            </div>
+
+            <div class="response-card__com-window">
+              <p claas="response-card__com-text">
+                Хороша хімчистка, все швидко і якісно.
+                Але потрібно мати зі собою готівку, терміналу немає, хоча за пару метрів є банкомат.
+              </p>
+            </div>
+          </a>
+        </li>
+
+        <li class="reviews-list__item response-card">
+          <a class="response-card__link" href="#!">
+            <div class="response-card__top-card">
+
+
+              <div>
+                <img src="./src/images\reviews\Sveta.jpg" alt="">
+              </div>
+
+              <div class="response-card__reviers-info">
+                <h3 class="response-card__title">Света Светланова</h3>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <time class="response-card__date" datetime="2022-11-14">14 листопада</time>
+              </div>
+            </div>
+
+            <div class="response-card__com-window">
+              <p claas="response-card__com-text">
+                Здавала пальто,гарно почистили,персонал привітливий,ввічливий,ціна за чистку для мене приємлива,я
+                задоволена,буду
+                звертатися тільки сюди.
+              </p>
+            </div>
+          </a>
+        </li>
+
+        <li class="reviews-list__item response-card">
+          <a class="response-card__link" href="#!">
+            <div class="response-card__top-card">
+              <img src="./src/images\reviews\Volodimir.jpg" alt="">
+              <div class="response-card__reviers-info">
+                <h3 class="response-card__title">Владимир Постоловский</h3>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+
+                <time class="response-card__date" datetime="2022-11-14">14 листопада</time>
+              </div>
+            </div>
+
+            <div class="response-card__com-window">
+              <p claas="response-card__com-text">
+                Здавав військову форму з плямою від ручки, інші хімчистки відмовили. Почистили гарно, жодної плями не
+                лишилося.
+                Дякую!
+              </p>
+            </div>
+          </a>
+        </li>
+
+        <li class="reviews-list__item response-card">
+          <a class="response-card__link" href="#!">
+            <div class="response-card__top-card">
+              <img src="./src/images\reviews\Natalya.jpg" alt="">
+              <div class="response-card__reviers-info">
+                <h3 class="response-card__title">Natalya Sobol</h3>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+                <svg width="16" height="16">
+                  <use href="./src/images\symbol-defs.svg#icon-star"></use>
+                </svg>
+
+
+                <time class="response-card__date" datetime="2022-11-14">14 листопада</time>
+              </div>
+            </div>
+
+            <div class="response-card__com-window">
+              <p claas="response-card__com-text">
+                Хороша хімчистка, все швидко і якісно.
+                Але потрібно мати зі собою готівку, терміналу немає, хоча за пару метрів є банкомат.
+              </p>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>ЧАСТІ ЗАПИТАННЯ</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <input class="faq-input" type="checkbox" name="faq_1" id="faq_1">
+          <label class="faq-title" for="faq_1">
+            Чому, приймаючи речі, пишуть у квитанції “без гарантії якості”?
+          </label>
+          <div class="faq-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eius. Aspernatur beatae temporibus adipisci, debitis repellat eos magnam, corrupti provident quod animi culpa. Officia a quis deleniti quod eos. Earum!
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input class="faq-input" type="checkbox" name="faq_2" id="faq_2">
+          <label class="faq-title" for="faq_2">
+            Мої речі зіпсували в хімчистці!
+          </label>
+          <div class="faq-text">
+            <p>
+              Той же галузевий стандарт передбачає те, що відбувається з річчю в процесі хімічної чистки: його положення про псування
+              речей викладені лише на одній сторінці і ознайомлення з цими випадками займе максимум 5 хвилин, що варто зробити. Речі
+              не псуються хімчисткою або в хімчистці, ніхто ж не ставить плям , їх обробляють хімією, причому з допомогою машин, де
+              все строго дозовано, тому навмисно зіпсувати річ можна тільки якщо чистити кустарним методом. Чому ж річ, як дехто каже,
+              виглядає не так? Виробники одягу в гонитві за модою часто не дотримуються технологічних процесів і виготовляють неякісні
+              речі, крім того на речах комбінують такі матеріали, які обробляти одночасно практично неможливо, наприклад шкіра +
+              тканина – різні процеси обробки для кожної складової. При всіх цих параметрах виробник речі ставить знак хімічної
+              чистки, який є технологічною інструкцією для хіміка, який починає працювати з річчю, при цьому знак стоїть один для
+              всього: тканини, шкіри, фурнітури. Але це не правильно, бо різні тканини, фурнітура можуть оброблятися абсолютно по
+              різному, звідси й кінцеві результати.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input class="faq-input" type="checkbox" name="faq_3" id="faq_3">
+          <label class="faq-title" for="faq_3">
+            Для чого у квитанції описують всі пошкодження і плями на речах? Навіщо запитують, що за плями на моїх речах?
+          </label>
+          <div class="faq-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eius. Aspernatur beatae temporibus adipisci, debitis
+              repellat eos magnam, corrupti provident quod animi culpa. Officia a quis deleniti quod eos. Earum!
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input class="faq-input" type="checkbox" name="faq_4" id="faq_4">
+          <label class="faq-title" for="faq_4">
+            Може в хімчистці відбуватися усадка речей?
+          </label>
+          <div class="faq-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eius. Aspernatur beatae temporibus adipisci, debitis
+              repellat eos magnam, corrupti provident quod animi culpa. Officia a quis deleniti quod eos. Earum!
+            </p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="contacts">
+    <div class="map">
+      <div class="map__google-map-container">
+        <iframe class="map__google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10421.345179964452!2d28.496456463716857!3d49.232112945808254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b6a77922847%3A0xe9f11d7b1f81923d!2z0KXRltC80YfQuNGB0YLQutCwIEFLU0k!5e0!3m2!1suk!2sua!4v1679474269117!5m2!1suk!2sua"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <p class="map__map-title">
+        Головне відділення
+      </p>
+    </div>
+      
+      <div class="container">
+        <ul class="address-btn-list">
+          <li class="address-btn-list__item">
+            <button class="address-btn map-btn-1">
+              <img class="address-btn__img" src="./src/images/icons/sign-min.svg" width="30" height="30"> 
+              Скалецького, 7 
+            </button>
+          </li>
+
+          <li class="address-btn-list__item">
+            <button class="address-btn map-btn-2" > 
+              <img class="address-btn__img" src="./src/images/icons/sign-min.svg" width="30" height="30"> 
+              Воїнів-інтернаціоналістів, 14А 
+            </button>
+          </li>
+
+          <li class="address-btn-list__item">
+            <button class="address-btn address-btn--active map-btn-3" >  
+              <img class="address-btn__img" src="./src/images/icons/sign-min.svg" width="30" height="30"> 
+              Замостянська, 33
+            </button>
+          </li>
+
+          <li class="address-btn-list__item">
+            <button class="address-btn map-btn-4">
+              <img class="address-btn__img" src="./src/images/icons/sign-min.svg" width="30" height="30"> 
+              Келецька, 45а 
+          </li>
+
+          <li class="address-btn-list__item">
+            <button class="address-btn map-btn-5"> 
+              <img class="address-btn__img" src="./src/images/icons/sign-min.svg" width="30" height="30"> 
+              Жмеринка, вул. Франка, 2
+            </button>
+          </li>
+        </ul>
+
+      </div>
+
+      <address class="address">
+        <div class="location-box">
+          <div class="location-box__img-box">
+            <svg class="location-box__img" width="30" height="30">
+              <use href="./src/images/symbol-defs.svg#icon-placeholder"></use>
+            </svg>
+          </div>
+
+          <div class="location-box__address-block">
+            <p class="location-box__address-block-title">
+              Адреса
+            </p>
+            <a class="location-box__address-block-text address-text" href="https://bit.ly/406ZjI2" target="_blank" rel="noopener noreferrer">
+              Вінниця, вул. Замостянська, 33
+            </a>
+          </div>
+        </div>
+
+        <div class="location-box">
+          <div class="location-box__img-box">
+            <svg class="location-box__img" width="30" height="30">
+              <use href="./src/images/symbol-defs.svg#icon-phone"></use>
+            </svg>
+          </div>
+        
+          <div class="location-box__address-block">
+            <p class="location-box__address-block-title">
+              Телефон
+            </p>
+            <a class="location-box__address-block-text first-phone-number" href="tel:+38 (063) 291-39-11">
+              +38 (063) 291-39-11
+            </a>
+            <a class="location-box__address-block-text second-phone-number" href="tel:+38 (063) 291-39-11">
+              +38 (097) 928-85-57
+            </a>
+          </div>
+        </div>
+
+        <div class="location-box">
+          <div class="location-box__img-box">
+            <svg class="location-box__img" width="30" height="30">
+              <use href="./src/images/symbol-defs.svg#icon-watch"></use>
+            </svg>
+          </div>
+        
+          <div class="location-box__address-block">
+            <p class="location-box__address-block-title">
+              Розклад роботи
+            </p>
+
+            <p class="location-box__address-block-text first-working-time">
+              <span class="location-box__address-block-data">ПН - ПТ</span> 8:00–18:00
+            </p>
+            <p class="location-box__address-block-text second-working-time">
+              <span class="location-box__address-block-data "> СБ - НД</span> 8:00–16:00
+            </p>
+          </div>
+        </div>
+
+      </address>
+  </section> 
+
+  <script src="./src/libs/jquery/jquery.min.js"></script>
+  <script src="./src/libs/slick-1.8.1/slick/slick.min.js"></script>
+  <script src="./src/libs/main.js"></script>
+  <script src="./src/map.js"></script>
+
 </body>
+
 </html>
