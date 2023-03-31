@@ -1,0 +1,107 @@
+.logo {
+  margin-right: auto;
+}
+
+.common-navigation {
+  position: absolute;
+  top: 30px;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width:768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width:1350px) {
+    width: 1350px;
+  }
+
+}
+
+.common-navigation--static {
+  position: static;
+
+  padding-bottom: 50px;
+  border-color: $main-white-color;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.2);
+}
+
+.nav {
+  display: none;
+
+  @media screen and (min-width:1350px) {
+    display: block;
+
+    margin-right: 52px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__list-link {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: $main-color;
+  } 
+
+  &__list-link--footer {
+    color: $main-white-color;
+  }
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  &__icon {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.tel-list {
+  display: none;
+
+  @media screen and (min-width:768px) {
+    display: flex;
+    margin-left: 52px;
+  }
+
+
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: $main-color;
+  }
+
+  &__link--footer {
+    color: $main-white-color;
+  }
+}
+
