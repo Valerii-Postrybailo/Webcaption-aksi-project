@@ -226,9 +226,19 @@
 .upload-price__link{
   display: flex;
   align-items: center;
+
+  transition: color 150ms $animation-timer;
+
+  &:hover,:focus{
+    color:$hover-color;
+  }
 }
+
 
 .upload-price__icon{
   margin-right: 20px;
-}
+
+  fill:$main-color;
+
+} 
 

@@ -8,8 +8,6 @@ p {
   margin: 0;
 }
 
-/* Класс для обнуления базовых свойств у списков (ul) */
-
 ul {
   list-style: none;
   padding-left: 0;
@@ -20,20 +18,17 @@ li {
   list-style: none;
 }
 
-/* Класс для обнуления базовых свойств у ссылок */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Свойства для корректного отображения картинок */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Свойства для обнуления курсива у address */
 address {
   font-style: normal;
   /* or */

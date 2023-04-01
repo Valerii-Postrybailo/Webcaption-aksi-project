@@ -11,7 +11,10 @@
   border: 2px solid #094581;
   border-radius: 30px;
   background-color: transparent;
+
   cursor: pointer;
+
+  transition: background-color 150ms $animation-timer, color 150ms $animation-timer;
 
 }
 .button:hover {

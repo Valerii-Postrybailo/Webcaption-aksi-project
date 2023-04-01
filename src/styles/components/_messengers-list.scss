@@ -1,0 +1,24 @@
+.messengers-list{
+  display:flex;
+  margin-left:auto;
+
+  &__item {
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+
+    transition: transform 150ms, -webkit-transform 150ms;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+
+    &__link{
+      display:flex ;
+    }
+  };
+
+  &__icon{
+    fill: $main-white-color;
+  }
+}

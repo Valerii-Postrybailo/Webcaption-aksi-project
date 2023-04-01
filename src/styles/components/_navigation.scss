@@ -1,29 +1,26 @@
-.logo {
-  margin-right: auto;
-}
-
 .common-navigation {
   position: absolute;
   top: 30px;
 
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 250px;
 
   @media screen and (min-width:768px) {
-    width: 768px;
+    width: 738px;
   }
 
   @media screen and (min-width:1350px) {
-    width: 1350px;
+    width: 1320px;
   }
 
 }
 
-.common-navigation--static {
+.common-navigation--footer {
   position: static;
 
   padding-bottom: 50px;
+  margin-bottom: 20px;
   border-color: $main-white-color;
   border-bottom: solid 2px rgba(255, 255, 255, 0.2);
 }
@@ -54,6 +51,12 @@
     font-feature-settings: 'pnum' on, 'lnum' on;
 
     color: $main-color;
+
+    transition: color 150ms $animation-timer ;
+
+    &:hover,:focus{
+      color: $hover-color;
+    }
   } 
 
   &__list-link--footer {
@@ -90,7 +93,7 @@
   }
 
 
-  &__link {
+  &__link, span{
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -98,6 +101,12 @@
     font-feature-settings: 'pnum' on, 'lnum' on;
 
     color: $main-color;
+
+    transition: color 150ms $animation-timer ;
+  }
+
+  &__link:hover,:focus{
+    color: $hover-color;
   }
 
   &__link--footer {

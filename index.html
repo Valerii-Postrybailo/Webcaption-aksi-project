@@ -25,7 +25,7 @@
     <div class="container above-header-line__container">
       <ul class="messengers-list">
         <li class="messengers-list__item">
-          <a class="messengers-list__link" href=" ">
+          <a class="messengers-list__link" href="#!">
             <svg class="messengers-list__icon" width="20" height="20">
               <use href="./src/images/symbol-defs.svg#icon-facebook"></use>
             </svg>
@@ -33,7 +33,7 @@
         </li>
 
         <li class="messengers-list__item">
-          <a class="messengers-list__link" href="">
+          <a class="messengers-list__link" href="#!">
             <svg class="messengers-list__icon" width="20" height="20">
               <use href="./src/images/symbol-defs.svg#icon-instagram"></use>
             </svg>
@@ -41,7 +41,7 @@
         </li>
 
         <li class="messengers-list__item">
-          <a class="messengers-list__link" href="">
+          <a class="messengers-list__link" href="#!">
             <svg class="messengers-list__icon" width="20" height="20">
               <use href="./src/images/symbol-defs.svg#icon-viber"></use>
             </svg>
@@ -49,7 +49,7 @@
         </li>
 
         <li class="messengers-list__item">
-          <a class="messengers-list__link" href="">
+          <a class="messengers-list__link" href="#!">
             <svg class="messengers-list__icon" width="20" height="20">
               <use href="./src/images/symbol-defs.svg#icon-telegram"></use>
             </svg>
@@ -62,26 +62,26 @@
   <header class="header">
     <div class="container">
       <div class="common-navigation">
-        <a class="logo" href="">
+        <a class="logo" href="#!">
           <img src="./src/images/logo/header-logo.png" alt="Лого сайту">
         </a>
 
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__list-item">
-              <a class="nav__list-link" href="">Послуги</a>
+              <a class="nav__list-link" href="#services">Послуги</a>
             </li>
 
             <li class="nav__list-item">
-              <a class="nav__list-link" href="">Відгуки</a>
+              <a class="nav__list-link" href="#reviews">Відгуки</a>
             </li>
 
             <li class="nav__list-item">
-              <a class="nav__list-link" href="">Часті питання</a>
+              <a class="nav__list-link" href="#questions">Часті питання</a>
             </li>
 
             <li class="nav__list-item">
-              <a class="nav__list-link" href="">Контакти</a>
+              <a class="nav__list-link" href="#contacts">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -94,7 +94,7 @@
 
         <ul class="tel-list">
           <li>
-            <a class="tel-list__link" href="tel:+38063291-39-11">+38 063 291-39-11 /</a>
+            <a class="tel-list__link" href="tel:+38063291-39-11">+38 063 291-39-11 </a> <span>/</span>
           </li>
 
           <li>
@@ -145,7 +145,7 @@
 
   <section class="services">
     <div class="container">
-      <h2>Ціни та послуги</h2>
+      <h2 id="services">Ціни та послуги</h2>
 
       <form class="search-form">
         <input class="search-form__input" type="search" name="search" placeholder="Введіть для пошуку..." />
@@ -153,7 +153,7 @@
 
       <ul class="upload-price">
         <li class="upload-price__item">
-          <a class="upload-price__link" href="">
+          <a class="upload-price__link" href="/src/download/test-xlsx.xlsx" download>
             <svg class="upload-price__icon" width="30" height="30">
               <use href="./src/images/symbol-defs.svg#icon-xls"></use>
             </svg>
@@ -162,7 +162,7 @@
         </li>
 
         <li class="upload-price__item">
-          <a class="upload-price__link" href="">
+          <a class="upload-price__link" href="/src/download/test-pdf.pdf" download>
             <svg class="upload-price__icon" width="30" height="30">
               <use href="./src/images/symbol-defs.svg#icon-pdf"></use>
             </svg>
@@ -272,7 +272,7 @@
 
   <section class="reviews">
     <div class="container">
-      <h2 class="reviews__title">Відгуки про нас</h2>
+      <h2 class="reviews__title" id="reviews">Відгуки про нас</h2>
       <ul class="reviews__list reviews-list " data-slick>
         <!-- ='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":true }' -->
 
@@ -540,7 +540,7 @@
 
   <section class="faq-section">
     <div class="container">
-      <h2>ЧАСТІ ЗАПИТАННЯ</h2>
+      <h2 id="questions">ЧАСТІ ЗАПИТАННЯ</h2>
       <div class="faq">
         <div class="faq-item">
           <input class="faq-input" type="checkbox" name="faq_1" id="faq_1">
@@ -727,7 +727,7 @@
 
         <div class="communication">
 
-          <h2 class="communication__title">Зв'яжіться з нами</h2>
+          <h2 class="communication__title" id="contacts">Зв'яжіться з нами</h2>
 
           <form class="user-communication-form" name="user-feedback-form" autocomplete="on" >
 
@@ -774,7 +774,7 @@
       </div>
       <footer class="footer">
         <div class="container">
-          <div class="common-navigation common-navigation--static">
+          <div class="common-navigation common-navigation--footer">
             <a class="logo" href="#!">
               <img src="./src/images/logo/footer-logo.png" alt="Лого сайту">
             </a>
@@ -782,19 +782,19 @@
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__list-item">
-                  <a class="nav__list-link nav__list-link--footer" href="">Послуги</a>
+                  <a class="nav__list-link nav__list-link--footer" href="#services">Послуги</a>
                 </li>
           
                 <li class="nav__list-item">
-                  <a class="nav__list-link nav__list-link--footer" href="">Відгуки</a>
+                  <a class="nav__list-link nav__list-link--footer" href="#reviews">Відгуки</a>
                 </li>
           
                 <li class="nav__list-item">
-                  <a class="nav__list-link nav__list-link--footer" href="">Часті питання</a>
+                  <a class="nav__list-link nav__list-link--footer" href="#questions">Часті питання</a>
                 </li>
           
                 <li class="nav__list-item">
-                  <a class="nav__list-link nav__list-link--footer" href="">Контакти</a>
+                  <a class="nav__list-link nav__list-link--footer" href="#contacts">Контакти</a>
                 </li>
               </ul>
             </nav>
@@ -823,6 +823,10 @@
           </div>
 
           <div class="above-header-line__container">
+            <p class="copyright-notice">
+              &copy; 2021 AKSI
+            </p>
+
             <ul class="messengers-list">
               <li class="messengers-list__item">
                 <a class="messengers-list__link" href=" ">
@@ -865,7 +869,10 @@
   <script src="./src/libs/jquery/jquery.min.js"></script>
   <script src="./src/libs/slick-1.8.1/slick/slick.min.js"></script>
   <script src="./src/libs/main.js"></script>
-  <script src="./src/map.js"></script>
+
+  <script src="./src/js/anchor-scroll.js" type="module"></script>
+  <script src="./src/js/map.js" type="module"></script>
+  
 
 </body>
 
