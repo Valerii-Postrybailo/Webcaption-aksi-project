@@ -44,13 +44,14 @@
   display: block;
 
   cursor: pointer;
-  padding: 20px 0px 20px 30px;
+  padding: 20px 45px 20px 30px;
 
   &::after {
       content:" ";
       background-image: url("/src/images/arrow.svg");
       
       position: absolute;
+      top: 40%;
       right: 22px;
 
       display: inline-block;

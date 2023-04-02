@@ -121,6 +121,8 @@
 
 .slick-dots
 {
+    left:10px;
+
     position: absolute;
     bottom: -50px;
 
@@ -133,6 +135,7 @@
     list-style: none;
 
     text-align: center;
+    
 }
 
 .slick-dots li
