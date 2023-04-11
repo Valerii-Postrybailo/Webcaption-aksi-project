@@ -17,12 +17,20 @@
 }
 
 .common-navigation--footer {
-  position: static;
+  display: none;
 
-  padding-bottom: 50px;
-  margin-bottom: 20px;
-  border-color: $main-white-color;
-  border-bottom: solid 2px rgba(255, 255, 255, 0.2);
+  // @media screen and (min-width:768px) {
+  //   width: 738px;
+  // }
+
+  @media screen and (min-width:1350px) {
+    position: static;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    border-color: $main-white-color;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.2);
+    display: flex;
+  }
 }
 
 .nav {

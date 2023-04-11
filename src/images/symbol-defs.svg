@@ -61,5 +61,11 @@
     <symbol id="mobile-burger-menu" width="40" height="40">
       <path  d="M8 14.667V12h24v2.667H8Zm0 6.666h24v-2.666H8v2.666ZM8 28h24v-2.667H8V28Z" />
     </symbol>
+
+  <symbol id="go-top-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 18v-4h-7v-4h7v-4l6 6-6 6z"/>
+    </svg>
+  </symbol>
   </defs>
 </svg>

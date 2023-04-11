@@ -14,3 +14,14 @@
 
   color: $main-white-color;
 }
+
+.button--footer{
+  @media  screen and (max-width: 768px) {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.tel-list__link--footer + .footer-span{
+  color:$main-white-color;
+}

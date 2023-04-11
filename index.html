@@ -313,9 +313,9 @@
             </div>
 
             <div class="response-card__com-window">
-              <p claas="response-card__com-text">
-                Здавала пальто,гарно почистили,персонал привітливий,ввічливий,ціна за чистку для мене приємлива,я
-                задоволена,буду
+              <p class="response-card__com-text">
+                Здавала пальто, гарно почистили, персонал привітливий, ввічливий, ціна за чистку для мене приємлива, я
+                задоволена, буду
                 звертатися тільки сюди.
               </p>
             </div>
@@ -355,7 +355,7 @@
             </div>
 
             <div class="response-card__com-window">
-              <p claas="response-card__com-text">
+              <p class="response-card__com-text">
                 Здавав військову форму з плямою від ручки, інші хімчистки відмовили. Почистили гарно, жодної плями не
                 лишилося. Дякую!
               </p>
@@ -397,7 +397,7 @@
             </div>
 
             <div class="response-card__com-window">
-              <p claas="response-card__com-text">
+              <p class="response-card__com-text">
                 Хороша хімчистка, все швидко і якісно.
                 Але потрібно мати зі собою готівку, терміналу немає, хоча за пару метрів є банкомат.
               </p>
@@ -442,7 +442,7 @@
             </div>
 
             <div class="response-card__com-window">
-              <p claas="response-card__com-text">
+              <p class="response-card__com-text">
                 Здавала пальто,гарно почистили,персонал привітливий,ввічливий,ціна за чистку для мене приємлива,я
                 задоволена,буду
                 звертатися тільки сюди.
@@ -484,7 +484,7 @@
             </div>
 
             <div class="response-card__com-window">
-              <p claas="response-card__com-text">
+              <p class="response-card__com-text">
                 Здавав військову форму з плямою від ручки, інші хімчистки відмовили. Почистили гарно, жодної плями не
                 лишилося.
                 Дякую!
@@ -526,7 +526,7 @@
             </div>
 
             <div class="response-card__com-window">
-              <p claas="response-card__com-text">
+              <p class="response-card__com-text">
                 Хороша хімчистка, все швидко і якісно.
                 Але потрібно мати зі собою готівку, терміналу немає, хоча за пару метрів є банкомат.
               </p>
@@ -548,7 +548,7 @@
             Чому, приймаючи речі, пишуть у квитанції “без гарантії якості”?
           </label>
           <div class="faq-text">
-            <p>
+            <p class="faq-text__label"> 
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eius. Aspernatur beatae temporibus adipisci, debitis repellat eos magnam, corrupti provident quod animi culpa. Officia a quis deleniti quod eos. Earum!
             </p>
           </div>
@@ -560,7 +560,7 @@
             Мої речі зіпсували в хімчистці!
           </label>
           <div class="faq-text">
-            <p>
+            <p class="faq-text__label">
               Той же галузевий стандарт передбачає те, що відбувається з річчю в процесі хімічної чистки: його положення про псування
               речей викладені лише на одній сторінці і ознайомлення з цими випадками займе максимум 5 хвилин, що варто зробити. Речі
               не псуються хімчисткою або в хімчистці, ніхто ж не ставить плям , їх обробляють хімією, причому з допомогою машин, де
@@ -581,7 +581,7 @@
             Для чого у квитанції описують всі пошкодження і плями на речах? Навіщо запитують, що за плями на моїх речах?
           </label>
           <div class="faq-text">
-            <p>
+            <p class="faq-text__label">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eius. Aspernatur beatae temporibus adipisci, debitis
               repellat eos magnam, corrupti provident quod animi culpa. Officia a quis deleniti quod eos. Earum!
             </p>
@@ -594,7 +594,7 @@
             Може в хімчистці відбуватися усадка речей?
           </label>
           <div class="faq-text">
-            <p>
+            <p class="faq-text__label">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eius. Aspernatur beatae temporibus adipisci, debitis
               repellat eos magnam, corrupti provident quod animi culpa. Officia a quis deleniti quod eos. Earum!
             </p>
@@ -670,7 +670,7 @@
                 Адреса
               </p>
               <a class="location-box__address-block-text address-text" href="https://bit.ly/406ZjI2" target="_blank" rel="noopener noreferrer">
-                Вінниця, вул. Замостянська, 33
+                <span class="location-box__address-block-span">Вінниця,</span> вул. Замостянська, 33
               </a>
             </div>
           </div>
@@ -766,7 +766,7 @@
               aria-label = "Запитання"
               ></textarea>
           
-            <button class="button" type="submit">
+            <button class="button button--footer" type="submit">
               НАДІСЛАТИ
             </button>
           </form>
@@ -807,7 +807,8 @@
           
             <ul class="tel-list">
               <li>
-                <a class="tel-list__link tel-list__link--footer" href="tel:+38063291-39-11">+38 063 291-39-11 /</a>
+                <a class="tel-list__link tel-list__link--footer" href="tel:+38063291-39-11">+38 063 291-39-11 </a>
+                <span class="footer-span">/</span>
               </li>
           
               <li>
@@ -816,7 +817,7 @@
             </ul>
           
             <button type="button" class="menu-open-btn">
-              <svg class="menu-open-btn__burger-menu" width="40" height="40" aria-label="Переключатель мобильного меню ">
+              <svg class="menu-open-btn__burger-menu" width="40" height="40" aria-label="Cвітчер мобільного меню ">
                 <use href="./src/images/symbol-defs.svg#mobile-burger-menu"></use>
               </svg>
             </button>
@@ -864,6 +865,13 @@
           
         </div>
       </footer>
+        <div class="go-top go-top--show">
+          <svg width="35" height="35">
+            <use href="./src/images/symbol-defs.svg#go-top-icon"></use>
+          </svg>
+        </div>
+      
+      </div>
   </section> 
 
   <script src="./src/libs/jquery/jquery.min.js"></script>
@@ -872,7 +880,7 @@
 
   <script src="./src/js/anchor-scroll.js" type="module"></script>
   <script src="./src/js/map.js" type="module"></script>
-  
+  <script src="./src/js/go-top-btn.js" type="module"></script>
 
 </body>
 

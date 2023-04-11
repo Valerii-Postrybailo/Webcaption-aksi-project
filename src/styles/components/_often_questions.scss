@@ -43,8 +43,16 @@
 
   display: block;
 
-  cursor: pointer;
   padding: 20px 45px 20px 30px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height:calc(20/16);
+
+
+  color: $main-text-color;
 
   &::after {
       content:" ";
@@ -80,6 +88,13 @@
 .faq-text{
   display: none;
   padding: 0px 30px 34px 30px;
+  &__label{
+    font-family: 'Open Sans';
+  font-size: 16px;
+  line-height:calc(22/16);
+
+  color: $main-text-color;
+  }
 };
 
 .faq-input:checked ~ .faq-title:after{

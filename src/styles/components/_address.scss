@@ -1,17 +1,37 @@
 .address{
+  margin-bottom:100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
-  margin-bottom: 145px;
+  @media screen and(min-width:1350px){
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    margin-bottom: 145px;
+  }
 }
 
 
 .location-box{
   display: flex;
 
+  width:300px;
+
   &:not(:last-child){
-    margin-right: 70px;
+    margin-bottom: 20px;
   }
+
+  @media screen and(min-width:1350px){
+    &:not(:last-child){
+      margin-right: 70px;
+      margin-bottom: 0;
+
+    }
+  }
+  
+  
 }
 
 .location-box__img-box{
@@ -33,7 +53,7 @@
 
   font-weight: 700;
   font-size: 16px;
-  line-height: cals(16/25);
+  line-height: calc(16/25);
 
   color: $main-text-color;
 }
@@ -60,4 +80,9 @@
   &:hover{
     color:$hover-color;
   }
+}
+
+.location-box__address-block-span{
+  display: block;
+  margin-bottom: 10px;
 }
