@@ -16,7 +16,7 @@ body {
 
 .container {
   width: 100%;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 20px 0px 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -138,7 +138,7 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  background-color: #27698A;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -170,7 +170,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .go-top > svg {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  fill: #094581;
+  fill: #F1F7FE;
 }
 
 .common-navigation {
@@ -278,6 +278,13 @@ input[type="search"]::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
+.language-button--mobile-menu {
+  margin: 15px;
+  margin-top: auto;
+  width: 50px;
+  height: 50px;
+}
+
 .tel-list {
   display: none;
 }
@@ -339,6 +346,74 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .messengers-list__icon {
   fill: #ffff;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px 80px 35px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
+}
+
+.mob-nav__list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.mob-nav__list-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #094581;
+}
+
+.mob-tel-list__link {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #094581;
+}
+
+.mob-menu-close-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button__cross-button {
+  fill: #999999;
 }
 
 .header {

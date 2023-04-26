@@ -1,5 +1,6 @@
 const goTopBtn = document.querySelector(".go-top");
 
+goTopBtn.classList.remove("go-top--show");
 
 const goTop = () => { 
   console.log("click")
