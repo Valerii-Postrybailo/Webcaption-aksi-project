@@ -16,7 +16,7 @@ body {
 
 .container {
   width: 100%;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 25px 0px 25px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,6 +100,13 @@ input[type="search"]::-webkit-search-results-decoration {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/*--------HIDDEN-EL------------------*/
+.is-hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .button {
@@ -187,13 +194,13 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media screen and (min-width: 768px) {
   .common-navigation {
-    width: 738px;
+    width: 725px;
   }
 }
 
 @media screen and (min-width: 1350px) {
   .common-navigation {
-    width: 1320px;
+    width: 1300px;
   }
 }
 
@@ -390,6 +397,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .mob-tel-list__link {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 27px;
   line-height: 30px;
