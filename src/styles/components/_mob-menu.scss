@@ -1,4 +1,4 @@
-.mob-menu{
+.mob-menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -15,20 +15,18 @@
 
   background-color: #fff;
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 1350px) {
     display: none;
   }
-
 }
 
-.mob-nav__list-item{
-
-  &:not(:last-child){
+.mob-nav__list-item {
+  &:not(:last-child) {
     margin-bottom: 10px;
   }
 }
 
-.mob-nav__list-link{
+.mob-nav__list-link {
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
@@ -36,11 +34,9 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #094581;
-  
 }
 
-.mob-tel-list__link{
-
+.mob-tel-list__link {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -49,17 +45,14 @@
 
   text-align: center;
   text-transform: uppercase;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-
+  font-feature-settings: "pnum" on, "lnum" on;
 
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #094581;
-  
 }
 
-
-.mob-menu-close-btn{
+.mob-menu-close-btn {
   display: flex;
   margin-left: auto;
   padding: 0;
@@ -68,6 +61,6 @@
   background-color: transparent;
 }
 
-.menu-button__cross-button{
+.menu-button__cross-button {
   fill: $secondary-text-color;
 }

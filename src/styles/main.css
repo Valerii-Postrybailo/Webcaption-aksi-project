@@ -189,7 +189,7 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 250px;
+  width: 90%;
 }
 
 @media screen and (min-width: 768px) {
@@ -243,19 +243,20 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .nav__list-link {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 700;
   font-size: 14px;
-  line-height: calc(16/14);
+  line-height: calc(16 / 14);
   text-transform: uppercase;
-  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
-          font-feature-settings: 'pnum' on, 'lnum' on;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
   color: #094581;
   -webkit-transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__list-link:hover, .nav__list-link :focus {
+.nav__list-link:hover,
+.nav__list-link :focus {
   color: #0F97D8;
 }
 
@@ -305,19 +306,21 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-.tel-list__link, .tel-list span {
+.tel-list__link,
+.tel-list span {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
-  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
-          font-feature-settings: 'pnum' on, 'lnum' on;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
   color: #094581;
   -webkit-transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tel-list__link:hover, .tel-list :focus {
+.tel-list__link:hover,
+.tel-list :focus {
   color: #0F97D8;
 }
 
@@ -376,7 +379,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #fff;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1350px) {
   .mob-menu {
     display: none;
   }
@@ -403,8 +406,8 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
-          font-feature-settings: 'pnum' on, 'lnum' on;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #094581;
@@ -1024,7 +1027,7 @@ input[type="search"]::-webkit-search-results-decoration {
   bottom: calc(100% - 0px);
   width: 100%;
   height: 180px;
-  background-image: url("/src/images/backing.svg");
+  background-image: url("../images/backing.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -1052,13 +1055,13 @@ input[type="search"]::-webkit-search-results-decoration {
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(20/16);
+  line-height: calc(20 / 16);
   color: #333333;
 }
 
 .faq-title::after {
   content: " ";
-  background-image: url("/src/images/arrow.svg");
+  background-image: url("../images/arrow.svg");
   position: absolute;
   top: 40%;
   right: 22px;
@@ -1088,15 +1091,15 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .faq-text__label {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 16px;
-  line-height: calc(22/16);
+  line-height: calc(22 / 16);
   color: #333333;
 }
 
 .faq-input:checked ~ .faq-title:after {
   content: " ";
-  background-image: url("/src/images/arrow.svg");
+  background-image: url("../images/arrow.svg");
   position: absolute;
   right: 22px;
   display: inline-block;
@@ -1332,12 +1335,13 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0 auto;
 }
 
-.user-communication-form > input, textarea {
-  font-family: 'Open Sans';
+.user-communication-form > input,
+textarea {
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: calc(16/22);
+  line-height: calc(16 / 22);
   color: #999999;
   background-color: #F1F7FE;
   border-radius: 30px;
@@ -1366,8 +1370,16 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-.user-communication-form__name-field {
-  margin-right: 25px;
+@media screen and (min-width: 768px) {
+  .user-communication-form__name-field {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .user-communication-form__name-field {
+    margin-right: 25px;
+  }
 }
 
 .user-communication-form__textarea-for-questions {

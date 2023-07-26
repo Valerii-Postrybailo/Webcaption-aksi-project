@@ -1,11 +1,11 @@
-.faq-section{
+.faq-section {
   position: relative;
 
   padding-bottom: 44px;
 
   background-color: $main-bg-color;
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -14,20 +14,20 @@
     width: 100%;
     height: 180px;
 
-    background-image: url('/src/images/backing.svg');
+    background-image: url("../images/backing.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
   }
-};
+}
 
-.faq{
-  width:100%;
+.faq {
+  width: 100%;
 
   background-color: $main-bg-color;
-};
+}
 
-.faq-item{
+.faq-item {
   width: 100%;
 
   background-color: $main-white-color;
@@ -36,9 +36,9 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
-};
+}
 
-.faq-title{
+.faq-title {
   position: relative;
 
   display: block;
@@ -49,64 +49,62 @@
 
   font-weight: 700;
   font-size: 16px;
-  line-height:calc(20/16);
-
+  line-height: calc(20 / 16);
 
   color: $main-text-color;
 
   &::after {
-      content:" ";
-      background-image: url("/src/images/arrow.svg");
-      
-      position: absolute;
-      top: 40%;
-      right: 22px;
+    content: " ";
+    background-image: url("../images/arrow.svg");
 
-      display: inline-block;
-      width: 16px;
-      height: 16px;
+    position: absolute;
+    top: 40%;
+    right: 22px;
 
-      transform: rotate(0deg);
-    }
-};
+    display: inline-block;
+    width: 16px;
+    height: 16px;
 
+    transform: rotate(0deg);
+  }
+}
 
-.faq-input{
-  width:0;
+.faq-input {
+  width: 0;
   height: 0;
 
   position: absolute;
 
   -webkit-appearance: none;
   appearance: none;
-};
+}
 
-.faq-input:checked ~ .faq-text{
+.faq-input:checked ~ .faq-text {
   display: block;
-};
+}
 
-.faq-text{
+.faq-text {
   display: none;
   padding: 0px 30px 34px 30px;
-  &__label{
-    font-family: 'Open Sans';
-  font-size: 16px;
-  line-height:calc(22/16);
+  &__label {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: calc(22 / 16);
 
-  color: $main-text-color;
+    color: $main-text-color;
   }
-};
+}
 
-.faq-input:checked ~ .faq-title:after{
+.faq-input:checked ~ .faq-title:after {
   content: " ";
-    background-image: url("/src/images/arrow.svg");
-  
-    position: absolute;
-    right: 22px;
-  
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-  
-    transform: rotate(180deg);
+  background-image: url("../images/arrow.svg");
+
+  position: absolute;
+  right: 22px;
+
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  transform: rotate(180deg);
 }

@@ -4,26 +4,21 @@
 
   display: flex;
   align-items: center;
-  width: 250px;
+  width: 90%;
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     width: 725px;
   }
 
-  @media screen and (min-width:1350px) {
+  @media screen and (min-width: 1350px) {
     width: 1300px;
   }
-
 }
 
 .common-navigation--footer {
   display: none;
 
-  // @media screen and (min-width:768px) {
-  //   width: 738px;
-  // }
-
-  @media screen and (min-width:1350px) {
+  @media screen and (min-width: 1350px) {
     position: static;
     padding-bottom: 50px;
     margin-bottom: 20px;
@@ -36,7 +31,7 @@
 .nav {
   display: none;
 
-  @media screen and (min-width:1350px) {
+  @media screen and (min-width: 1350px) {
     display: block;
 
     margin-right: 52px;
@@ -51,21 +46,22 @@
   }
 
   &__list-link {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 700;
     font-size: 14px;
-    line-height: calc(16/14);
+    line-height: calc(16 / 14);
     text-transform: uppercase;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: "pnum" on, "lnum" on;
 
     color: $main-color;
 
-    transition: color 150ms $animation-timer ;
+    transition: color 150ms $animation-timer;
 
-    &:hover,:focus{
+    &:hover,
+    :focus {
       color: $hover-color;
     }
-  } 
+  }
 
   &__list-link--footer {
     color: $main-white-color;
@@ -92,7 +88,7 @@
   }
 }
 
-.language-button--mobile-menu{
+.language-button--mobile-menu {
   margin: 15px;
   margin-top: auto;
 
@@ -103,25 +99,26 @@
 .tel-list {
   display: none;
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     margin-left: 52px;
   }
 
-
-  &__link, span{
+  &__link,
+  span {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: "pnum" on, "lnum" on;
 
     color: $main-color;
 
-    transition: color 150ms $animation-timer ;
+    transition: color 150ms $animation-timer;
   }
 
-  &__link:hover,:focus{
+  &__link:hover,
+  :focus {
     color: $hover-color;
   }
 
@@ -129,4 +126,3 @@
     color: $main-white-color;
   }
 }
-
