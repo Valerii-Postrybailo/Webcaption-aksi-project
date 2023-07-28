@@ -1,22 +1,20 @@
 body {
-  font-family: 'Raleway', 'Open Sans', sans-serif;
+  font-family: "Raleway", "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.container h2{
+.container h2 {
   margin-bottom: 40px;
   font-weight: 900;
   font-size: 30px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  color: #094581;
+  color: $main-color;
 }
 
-
 .container {
-
   width: 100%;
 
   padding: 0px 25px 0px 25px;
@@ -31,7 +29,7 @@ body {
     width: 768px;
   }
 
-  @media screen and (min-width:1350px) {
+  @media screen and (min-width: 1350px) {
     width: 1350px;
   }
 }
@@ -39,4 +37,3 @@ body {
 .logo {
   margin-right: auto;
 }
-

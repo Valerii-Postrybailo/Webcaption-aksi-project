@@ -1,10 +1,10 @@
-.address{
-  margin-bottom:100px;
+.address {
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media screen and(min-width:1350px){
+  @media screen and (min-width: 1350px) {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -13,28 +13,24 @@
   }
 }
 
-
-.location-box{
+.location-box {
   display: flex;
 
-  width:300px;
+  width: 300px;
 
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 20px;
   }
 
-  @media screen and(min-width:1350px){
-    &:not(:last-child){
+  @media screen and (min-width:1350px) {
+    &:not(:last-child) {
       margin-right: 70px;
       margin-bottom: 0;
-
     }
   }
-  
-  
 }
 
-.location-box__img-box{
+.location-box__img-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,41 +44,41 @@
   background-color: $main-bg-color;
 }
 
-.location-box__address-block-title{
+.location-box__address-block-title {
   margin-bottom: 10px;
 
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(16/25);
+  line-height: calc(16 / 25);
 
   color: $main-text-color;
 }
 
-.location-box__address-block-text{
-  font-family: 'Open Sans';
+.location-box__address-block-text {
+  font-family: "Open Sans";
   font-size: 16px;
-  line-height: calc(16/25);
+  line-height: calc(16 / 25);
 
   color: $main-text-color;
   &:not(:last-child) {
-      margin-bottom: 10px;
-    }
+    margin-bottom: 10px;
+  }
 }
 
-.location-box__address-block-data{
+.location-box__address-block-data {
   margin-right: 20px;
 }
 
 .address-text,
 .first-phone-number,
-.second-phone-number{
+.second-phone-number {
   display: block;
-  &:hover{
-    color:$hover-color;
+  &:hover {
+    color: $hover-color;
   }
 }
 
-.location-box__address-block-span{
+.location-box__address-block-span {
   display: block;
   margin-bottom: 10px;
 }

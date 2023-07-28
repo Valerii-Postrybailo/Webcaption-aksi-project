@@ -112,7 +112,7 @@
 
       <div class="mob-menu is-hidden" data-menu>
 
-        <button type="button" class="mob-menu-close-btn">
+        <button type="button" class="close-btn mob-menu-close-btn">
           <svg class="menu-button__cross-button" width="40" height="40" aria-label="Переключатель мобильного меню ">
             <use href="./src/images/symbol-defs.svg#close-window-icon-mobile"> </use>
           </svg>
@@ -909,12 +909,148 @@
       </footer>
         
       </div>
-      <div class="go-top go-top--show">
-        <svg width="35" height="35">
-          <use href="./src/images/symbol-defs.svg#go-top-icon"></use>
-        </svg>
-      </div>
   </section> 
+
+  <div class="go-top go-top--show">
+    <svg width="35" height="35">
+      <use href="./src/images/symbol-defs.svg#go-top-icon"></use>
+    </svg>
+  </div>
+
+  <div class ="backdrop" data-modal> <!--add class is-hidden -->
+    <div class="price-modal-window">
+      <button type="button" class="close-btn price-window-close-btn">
+        <svg class="menu-button__cross-button" width="40" height="40" aria-label="Переключатель мобильного меню ">
+          <use href="./src/images/symbol-defs.svg#close-window-icon-mobile"> </use>
+        </svg>
+      </button>
+
+      <div class="table-block">
+        <h3 class="price-modal-window__title">
+          Чистка одягу та текстильних виробів
+        </h3>
+  
+        <table class="price-table">
+          <thead class="price-table__head">
+            <tr class="price-table__head-row">
+              <th class="price-table__head-cell price-table__head-cell--name">Назва послуги</th>
+              <th class="price-table__head-cell price-table__head-cell--price">Ціна</th>
+            </tr>
+          </thead>
+  
+          <tbody class="price-table__body">
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Брюки</td>
+              <td class="price-table__body-cell price-table__body-cell--price">200.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Брюки спортивні</td>
+              <td class="price-table__body-cell price-table__body-cell--price">170.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Комбінезон, брюки з утеплювачем</td>
+              <td class="price-table__body-cell price-table__body-cell--price">320.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Костюм спортивний</td>
+              <td class="price-table__body-cell price-table__body-cell--price">320.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Ряса церковна/ + деталі </td>
+              <td class="price-table__body-cell price-table__body-cell--price">500,00/680,00</td>
+            </tr>
+            
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Шорти/ капрі</td>
+              <td class="price-table__body-cell price-table__body-cell--price">170,00/185,00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Піджак, кітель</td>
+              <td class="price-table__body-cell price-table__body-cell--price">260.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Костюм класичний брючний</td>
+              <td class="price-table__body-cell price-table__body-cell--price">410.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Сарафан, сукня проста</td>
+              <td class="price-table__body-cell price-table__body-cell--price">310.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Сукня вечірня, з аплікаціями, стразами /атласна </td>
+              <td class="price-table__body-cell price-table__body-cell--price">430,00/560,00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Сукня весільна проста/ складна</td>
+              <td class="price-table__body-cell price-table__body-cell--price">1050,00/1250,00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Корсет/ корсет весільний</td>
+              <td class="price-table__body-cell price-table__body-cell--price">280,00/420,00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Майка/ футболка</td>
+              <td class="price-table__body-cell price-table__body-cell--price">150.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Гольф, блуза проста/складна зі стразами, аплікація</td>
+              <td class="price-table__body-cell price-table__body-cell--price">165,00/195,00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Комбінезон жін. прост/складн. фасону</td>
+              <td class="price-table__body-cell price-table__body-cell--price">310,00/360,00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Сорочка чол/жін</td>
+              <td class="price-table__body-cell price-table__body-cell--price">160,00/175,00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Спідниця коротка/довга/в складку</td>
+              <td class="price-table__body-cell price-table__body-cell--price">155,00/185,00/2100,00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Шарф, шаль, палантин</td>
+              <td class="price-table__body-cell price-table__body-cell--price">150.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Берет, хустина, трикотажна шапка, рукавиці</td>
+              <td class="price-table__body-cell price-table__body-cell--price">150.00</td>
+            </tr>
+  
+            <tr class="price-table__body-row">
+              <td class="price-table__body-cell price-table__body-cell--name">Капелюх, кепка/фуражка, формений кашкет</td>
+              <td class="price-table__body-cell price-table__body-cell--price">180,00/200,00</td>
+            </tr>
+  
+  
+          </tbody>
+        </table>
+  
+        <button class="button price-modal-second-close-btn" type="button">
+          ЗАКРИТИ
+        </button>
+      </div>
+
+      
+    </div>
+  </div>
 
   <script src="./src/libs/jquery/jquery.min.js"></script>
   <script src="./src/libs/slick-1.8.1/slick/slick.min.js"></script>
