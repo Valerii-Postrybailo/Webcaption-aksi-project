@@ -3,6 +3,19 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #d4d4d4;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #094581;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
 
 .container h2 {
   margin-bottom: 40px;
@@ -112,6 +125,7 @@ input[type=search]::-webkit-search-results-decoration {
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .menu-button__cross-button {
@@ -131,16 +145,27 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .price-modal-window {
-  overflow-y: auto;
+  overflow-y: hidden;
   position: absolute;
   left: 50%;
   top: 50%;
-  height: 80%;
-  width: 70%;
+  height: 90%;
+  width: 90%;
   border-radius: 30px;
   background: #fff;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--animation-timer), scale 250ms var(--animation-timer);
+}
+@media screen and (min-width: 750px) {
+  .price-modal-window {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .price-modal-window {
+    height: 80%;
+    width: 70%;
+  }
 }
 
 .price-window-close-btn {
@@ -148,11 +173,27 @@ input[type=search]::-webkit-search-results-decoration {
   margin-right: 15px;
 }
 
-.table-block {
+.block-with-table {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 40px 60px 60px;
+  padding: 0px 40px 60px 40px;
+}
+
+.table-box {
+  overflow: auto;
+  height: 350px;
+  margin-bottom: 40px;
+}
+.table-box::-webkit-scrollbar {
+  width: 5px;
+}
+.table-box::-webkit-scrollbar-track {
+  background-color: #d4d4d4;
+}
+.table-box::-webkit-scrollbar-thumb {
+  background-color: #094581;
+  border-radius: 8px;
 }
 
 .price-modal-window__title {
@@ -167,7 +208,6 @@ input[type=search]::-webkit-search-results-decoration {
 
 .price-table {
   width: 100%;
-  margin-bottom: 40px;
   border-collapse: collapse;
   border-spacing: 0px;
 }
