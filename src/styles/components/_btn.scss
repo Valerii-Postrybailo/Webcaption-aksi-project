@@ -14,8 +14,8 @@
 
   cursor: pointer;
 
-  transition: background-color 150ms $animation-timer, color 150ms $animation-timer;
-
+  transition: background-color 80ms $animation-timer,
+    color 80ms $animation-timer;
 }
 .button:hover {
   color: white;

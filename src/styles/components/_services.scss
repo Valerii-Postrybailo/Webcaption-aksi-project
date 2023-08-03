@@ -10,17 +10,17 @@
   width: 100%;
   height: 60px;
 
-  @media screen and (min-width:768px){
+  @media screen and (min-width: 768px) {
     width: 700px;
   }
 
-  @media screen and (min-width:1350px){
+  @media screen and (min-width: 1350px) {
     width: 890px;
   }
 
   &::after {
     content: " ";
-    background-image: url("/src/images/icons/search.svg");
+    background-image: url("../images/icons/search.svg");
     position: absolute;
     width: 24px;
     height: 24px;
@@ -130,10 +130,9 @@
       border-bottom-right-radius: 0px;
     }
 
-    @media screen and (min-width:768px){
+    @media screen and (min-width: 768px) {
       padding: 30px;
       height: 230px;
-
     }
   }
 
@@ -153,7 +152,7 @@
     border-radius: 50%;
     background-color: $main-bg-color;
 
-    @media screen and (min-width:768px){
+    @media screen and (min-width: 768px) {
       display: flex;
 
       width: 70px;

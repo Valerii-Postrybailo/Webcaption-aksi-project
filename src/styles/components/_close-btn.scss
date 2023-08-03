@@ -11,3 +11,7 @@
 .menu-button__cross-button {
   fill: $secondary-text-color;
 }
+
+.menu-button__cross-button:hover {
+  fill: $hover-color;
+}
