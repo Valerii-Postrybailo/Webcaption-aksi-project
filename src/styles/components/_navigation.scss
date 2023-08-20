@@ -82,6 +82,7 @@
   background: transparent;
 
   &__icon {
+    border-radius: 50%;
     &:hover {
       cursor: pointer;
     }

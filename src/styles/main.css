@@ -148,6 +148,30 @@ input[type=search]::-webkit-search-results-decoration {
   transition: opacity 250ms var(--animation-timer);
 }
 
+.order-modal-window {
+  overflow-y: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 90%;
+  width: 90%;
+  border-radius: 30px;
+  background: #fff;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--animation-timer), scale 250ms var(--animation-timer);
+}
+@media screen and (min-width: 750px) {
+  .order-modal-window {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .order-modal-window {
+    height: 80%;
+    width: 70%;
+  }
+}
+
 .price-modal-window {
   overflow-y: hidden;
   position: absolute;
@@ -259,6 +283,31 @@ input[type=search]::-webkit-search-results-decoration {
   font-weight: 600;
   line-height: 1;
   color: #094581;
+}
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-popup {
+  position: absolute;
+  top: 100%;
+  left: -35%;
+  display: none;
+  padding: 10px;
+  border: 1px solid #094581;
+  border-radius: 20%;
+  background-color: white;
+}
+
+.language-option {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .button {
@@ -392,6 +441,9 @@ input[type=search]::-webkit-search-results-decoration {
   border: none;
   border-radius: 50%;
   background: transparent;
+}
+.language-button__icon {
+  border-radius: 50%;
 }
 .language-button__icon:hover {
   cursor: pointer;

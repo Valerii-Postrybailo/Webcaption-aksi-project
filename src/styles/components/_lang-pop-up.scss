@@ -1,0 +1,25 @@
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-popup {
+  position: absolute;
+  top: 100%;
+  left: -35%;
+  display: none;
+  padding: 10px;
+
+  border: 1px solid $main-color;
+  border-radius: 20%;
+  background-color: $main-white-color;
+}
+
+.language-option {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
