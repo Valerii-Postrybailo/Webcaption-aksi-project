@@ -15,6 +15,13 @@ const phoneNumbers = document.querySelector(".location-box__phone-number-box")
 
 let activeBtn = mapBtn3;
 
+
+const checkLang =() =>{
+  let hash = window.location.hash;
+  hash = hash.slice(1);
+  return hash
+}
+
 const activeToggle = (el) => {
   if (activeBtn) {
     activeBtn.classList.remove('address-btn--active');
@@ -24,48 +31,58 @@ const activeToggle = (el) => {
 }
 
 mapBtn1.addEventListener("click", () => {
-  googleMap.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10422.749943793107!2d28.41626363955079!3d49.225453599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5be40fd68679%3A0x1386973d939d74eb!2z0KXRltC80YfQuNGB0YLQutCwIC0g0L_RgNCw0LvRjNC90Y8gQUtTSSDQv9GA0LjQudC80LDQu9GM0L3QuNC5INC_0YPQvdC60YI!5e0!3m2!1suk!2sua!4v1679515018321!5m2!1suk!2sua";
+
+  const lang = checkLang()
+  console.log(checkLang())
+
+  googleMap.src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10422.749943793107!2d28.41626363955079!3d49.225453599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5be40fd68679%3A0x1386973d939d74eb!2z0KXRltC80YfQuNGB0YLQutCwIC0g0L_RgNCw0LvRjNC90Y8gQUtTSSDQv9GA0LjQudC80LDQu9GM0L3QuNC5INC_0YPQvdC60YI!5e0!3m2!1suk!2sua!4v1679515018321!5m2!1s${lang}!2sua`;
   activeToggle(mapBtn1);
 
-  // address.textContent = "Вінниця, вул. Родіона Скалецького, 7";
   address.href = "https://bit.ly/3Zdw8lc";
 
-  address.innerHTML= `<span class="location-box__address-block-span">Вінниця, вул. Родіона </span>  Скалецького, 7`;
+  address.innerHTML= `<span class="lang-vinnytsia-rodion-st location-box__address-block-span">Вінниця, вул. Родіона </span> <span class="lang-skaletskoho" >Скалецького, 7</span>`;
   
 
-  workingHours1.innerHTML = `<span class="location-box__address-block-data">ПН - ПТ</span>10:00–20:00`;
-  workingHours2.innerHTML = `<span class="location-box__address-block-data ">СБ - НД</span>10:00–16:00`;
+  workingHours1.innerHTML = `<span class="lang-mon-fri location-box__address-block-data">ПН - ПТ</span>10:00–20:00`;
+  workingHours2.innerHTML = `<span class="lang-sat-sun location-box__address-block-data ">СБ - НД</span>10:00–16:00`;
   
   phoneNumbers.innerHTML = `
     <a class="location-box__address-block-text first-phone-number" href="tel:+38 (063) 291-39-11">
       +38 (063) 291-39-09
     </a>`;
+
+  console.log(googleMap.src)
+  changeLang()
 });
 
 mapBtn2.addEventListener("click", () => {
-  googleMap.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.5741176673873!2d28.403158515927043!3d49.227603382592314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5c43674bd913%3A0xbc0d2bf528d7f9f2!2z0LLRg9C70LjRhtGPINCS0L7Rl9C90ZbQsi3QhtC90YLQtdGA0L3QsNGG0ZbQvtC90LDQu9GW0YHRgtGW0LIsIDE00LAsINCS0ZbQvdC90LjRhtGPLCDQktGW0L3QvdC40YbRjNC60LAg0L7QsdC70LDRgdGC0YwsIDIxMDAw!5e0!3m2!1suk!2sua!4v1679565894500!5m2!1suk!2sua";
+  const lang = checkLang()
+
+  googleMap.src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.5741176673873!2d28.403158515927043!3d49.227603382592314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5c43674bd913%3A0xbc0d2bf528d7f9f2!2z0LLRg9C70LjRhtGPINCS0L7Rl9C90ZbQsi3QhtC90YLQtdGA0L3QsNGG0ZbQvtC90LDQu9GW0YHRgtGW0LIsIDE00LAsINCS0ZbQvdC90LjRhtGPLCDQktGW0L3QvdC40YbRjNC60LAg0L7QsdC70LDRgdGC0YwsIDIxMDAw!5e0!3m2!1suk!2sua!4v1679565894500!5m2!1s${lang}!2sua`;
   activeToggle(mapBtn2);
 
-  // address.textContent = "Вінниця, вул. Воїнів-інтернаціоналістів, 14A";
   address.href = "https://bit.ly/40wrEr1";
-  address.innerHTML= `<span class="location-box__address-block-span">Вінниця, вул. Воїнів- </span> інтернаціоналістів, 14A`;
+  address.innerHTML= `<span class="lang-vinnytsya-voyiniv-st location-box__address-block-span">Вінниця, вул. Воїнів- </span> <span class="lang-internatsionalistiv">інтернаціоналістів, 14A </span>`;
 
   workingHours1.innerHTML = ``;
   workingHours2.innerHTML = ``;
   
   phoneNumbers.innerHTML = ``;
+
+  changeLang()
 });
 
 mapBtn3.addEventListener("click", () => {
-  googleMap.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10421.345179964452!2d28.496456463716857!3d49.232112945808254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b6a77922847%3A0xe9f11d7b1f81923d!2z0KXRltC80YfQuNGB0YLQutCwIEFLU0k!5e0!3m2!1suk!2sua!4v1679474269117!5m2!1suk!2sua";
+  const lang = checkLang()
+
+  googleMap.src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10421.345179964452!2d28.496456463716857!3d49.232112945808254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b6a77922847%3A0xe9f11d7b1f81923d!2z0KXRltC80YfQuNGB0YLQutCwIEFLU0k!5e0!3m2!1suk!2sua!4v1679474269117!5m2!1s${lang}!2sua`;
   activeToggle(mapBtn3);
 
-  // address.textContent = "Вінниця, вул. Замостянська, 33";
   address.href = "https://bit.ly/406ZjI2";
-  address.innerHTML= `<span class="location-box__address-block-span">Вінниця,</span> вул. Замостянська, 33`;
+  address.innerHTML= `<span class="lang-vinnitsa location-box__address-block-span">Вінниця,</span> <span class="lang-zamostyanska">вул. Замостянська, 33</span>`;
 
-  workingHours1.innerHTML = `<span class="location-box__address-block-data">ПН - ПТ</span>8:00–18:00`;
-  workingHours2.innerHTML = `<span class="location-box__address-block-data ">СБ - НД</span>8/9:00–16:00`;
+  workingHours1.innerHTML = `<span class="lang-mon-fri location-box__address-block-data">ПН - ПТ</span>8:00–18:00`;
+  workingHours2.innerHTML = `<span class="lang-sat-sun location-box__address-block-data ">СБ - НД</span>8/9:00–16:00`;
 
   phoneNumbers.innerHTML = `
     <a class="location-box__address-block-text first-phone-number" href="tel:+38 (063) 291-39-11">
@@ -75,34 +92,42 @@ mapBtn3.addEventListener("click", () => {
     <a class="location-box__address-block-text second-phone-number" href="tel:+38 (063) 291-39-11">
       +38 (097) 928-85-57
     </a>`;
+
+    changeLang()
 });
 
 mapBtn4.addEventListener("click", () => {
-  googleMap.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20845.499887586215!2d28.398754179101562!3d49.225453599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5c65443fffff%3A0x69b379869e06200f!2z0KXRltC80YfQuNGB0YLQutCwIC0g0L_RgNCw0LvRjNC90Y8g0JDQmtCh0IYg0L_RgNC40LnQvNCw0LvRjNC90LjQuSDQv9GD0L3QutGC!5e0!3m2!1suk!2sua!4v1679566086479!5m2!1suk!2sua";
+  const lang = checkLang()
+
+  googleMap.src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20845.499887586215!2d28.398754179101562!3d49.225453599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5c65443fffff%3A0x69b379869e06200f!2z0KXRltC80YfQuNGB0YLQutCwIC0g0L_RgNCw0LvRjNC90Y8g0JDQmtCh0IYg0L_RgNC40LnQvNCw0LvRjNC90LjQuSDQv9GD0L3QutGC!5e0!3m2!1suk!2sua!4v1679566086479!5m2!1s${lang}!2sua`;
   activeToggle(mapBtn4);
 
-  // address.textContent = "Вінниця, вул. Келецька, 45а";
   address.href = "https://bit.ly/3lBPZNi";
 
-  address.innerHTML= `<span class="location-box__address-block-span">Вінниця,</span> вул. Келецька, 45а`;
+  address.innerHTML= `<span class="lang-vinnitsa location-box__address-block-span">Вінниця,</span><span class="lang-keletska-st">вул. Келецька, 45а</span> `;
 
-  workingHours1.innerHTML = `<span class="location-box__address-block-data">ПН - ПТ</span>9:00–18:00`;
-  workingHours2.innerHTML = `<span class="location-box__address-block-data ">СБ - НД</span>-/10:00–15:00`;
+  workingHours1.innerHTML = `<span class="lang-mon-fri location-box__address-block-data">ПН - ПТ</span>9:00–18:00`;
+  workingHours2.innerHTML = `<span class="lang-sat-sun location-box__address-block-data ">СБ - НД</span>-/10:00–15:00`;
   
   phoneNumbers.innerHTML = `
     <a class="location-box__address-block-text first-phone-number" href="tel:+38 (063) 291-39-11">
       +38 (093) 239-05-91
     </a>`;
+
+    changeLang()
 });
 
 mapBtn5.addEventListener("click", () => {
-  googleMap.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.865372240962!2d28.110768315922172!3d49.032167496408604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4732a2bd61403cf1%3A0xce30e1387b5213c3!2z0LLRg9C70LjRhtGPINCG0LLQsNC90LAg0KTRgNCw0L3QutCwLCAyLCDQltC80LXRgNC40L3QutCwLCDQktGW0L3QvdC40YbRjNC60LAg0L7QsdC70LDRgdGC0YwsIDIzMTAw!5e0!3m2!1suk!2sua!4v1679566301432!5m2!1suk!2sua";
+  const lang = checkLang()
+
+  googleMap.src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.865372240962!2d28.110768315922172!3d49.032167496408604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4732a2bd61403cf1%3A0xce30e1387b5213c3!2z0LLRg9C70LjRhtGPINCG0LLQsNC90LAg0KTRgNCw0L3QutCwLCAyLCDQltC80LXRgNC40L3QutCwLCDQktGW0L3QvdC40YbRjNC60LAg0L7QsdC70LDRgdGC0YwsIDIzMTAw!5e0!3m2!1suk!2sua!4v1679566301432!5m2!1s${lang}!2sua`;
   activeToggle(mapBtn5);
 
-  address.textContent = "Жмеринка, вул. Франка, 2";
+  address.innerHTML = `<span class="lang-zhmerinka location-box__address-block-span">Жмеринка, вул. Франка, 2</span>`;
   address.href = "https://bit.ly/40Al9Ds";
   workingHours1.innerHTML = ``;
   workingHours2.innerHTML = ``;
   
   phoneNumbers.innerHTML = ``;
+  changeLang()
 });

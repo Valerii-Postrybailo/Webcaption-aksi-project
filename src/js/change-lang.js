@@ -1,41 +1,75 @@
-const findElAndAddEventListener = () =>{
+const findEl = () =>{
   const refs = {
-  langSelectorDiv: document.querySelector(".language-selector"),
+  langSelectorDiv: document.querySelectorAll(".language-selector"),
   languageButton: document.querySelectorAll('.language-button'),
 
-  ukrainianLangBtn : document.querySelector(".language-button.ukrainian-lang"),
-  englishLangBtn: document.querySelector(".language-button.english-lang"),
-  languagePopup: document.querySelector('.language-popup'),
+  ukrainianLangBtn : document.querySelectorAll(".language-button.ukrainian-lang"),
+  englishLangBtn: document.querySelectorAll(".language-button.english-lang"),
+  languagePopup: document.querySelectorAll('.language-popup'),
+
+  slickSlide: document.querySelector(".reviews__list.reviews-list"),
   };
 
   return refs;
 };
 
+
+const changeLang = () =>{
+  let hash = window.location.hash;
+  hash = hash.slice(1);
+
+  const nameInputPlaceholder = document.querySelector(".user-communication-form__name-field");
+  const messageInputPlaceholder = document.querySelector(".user-communication-form__textarea-for-questions")
+
+  if (hash === "en"){
+    nameInputPlaceholder.placeholder= "Your name";
+    messageInputPlaceholder.placeholder = "Message";
+  }else{
+    nameInputPlaceholder.placeholder= "Ваше ім’я";
+    messageInputPlaceholder.placeholder = "Повідомлення";
+
+  }
+
+  for (let key in langArr){
+    let el = document.querySelector(".lang-" + key);
+
+    // if(!el){
+    //   console.log(el, key)
+    // }
+
+    if (el){
+      el.textContent = langArr[key][hash]
+    }
+  }
+};
+
+
+
 const catchMouseEvent = () => {
   
-  const elRefs = findElAndAddEventListener();
+  const elRefs = findEl();
 
   elRefs.languageButton.forEach((el) => el.addEventListener('mouseover', () => {
-    elRefs.languagePopup.style.display = 'block';
+    elRefs.languagePopup.forEach((el) => el.style.display = 'block');
   }))
 
   elRefs.languageButton.forEach((el) => el.addEventListener('mouseout', () => {
-    elRefs.languagePopup.style.display = 'none';
+    elRefs.languagePopup.forEach((el) => el.style.display = 'none');
   }))
 
-  elRefs.languagePopup.addEventListener('mouseover', () => {
-    elRefs.languagePopup.style.display = 'block';
-  });
+  elRefs.languagePopup.forEach((el) =>el.addEventListener('mouseover', () => {
+    elRefs.languagePopup.forEach((el) => el.style.display = 'block');
+  }));
   
-  elRefs.languagePopup.addEventListener('mouseout', () => {
-    elRefs.languagePopup.style.display = 'none';
-  });
+  elRefs.languagePopup.forEach((el)=>el.addEventListener('mouseout', () => {
+    elRefs.languagePopup.forEach((el) => el.style.display = 'none');
+  }));
 }
 
 const renderEngLangBtn = () =>{
-  const elRefs = findElAndAddEventListener();
+  const elRefs = findEl();
 
-  elRefs.langSelectorDiv.innerHTML = `
+  elRefs.langSelectorDiv.forEach((el)=>el.innerHTML = `
     <button class="language-button english-lang" type="button">
       <svg class="language-button__icon" width="30" height="30" preserveAspectRatio="none" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 55.2 38.4" xml:space="preserve">
         <style>.st1{fill:#c8102e}</style>
@@ -53,20 +87,23 @@ const renderEngLangBtn = () =>{
         </svg>
       </button>
     </div>
-  `;   
-  
+  `);
+
   catchMouseEvent();
 
-  const elRefs1 = findElAndAddEventListener();
+  const elRefs1 = findEl();
 
-  elRefs1.englishLangBtn.classList.add("active-language");
-  elRefs1.ukrainianLangBtn.classList.remove("active-language");
+  elRefs1.englishLangBtn.forEach((el) => el.classList.add("active-language"));
+  elRefs1.ukrainianLangBtn.forEach((el) => el.classList.remove("active-language"));
+
+  location.href = window.location.pathname + '#' + "en";
+  changeLang();
 }
 
 const renderUkrLangBtn = ()=> {
-  const elRefs = findElAndAddEventListener()
+  const elRefs = findEl()
 
-  elRefs.langSelectorDiv.innerHTML = `
+  elRefs.langSelectorDiv.forEach((el)=>el.innerHTML = `
     <button class="language-button ukrainian-lang" type="button">
       <svg class="language-button__icon" width="30" height="30">
         <use href="./src/images/symbol-defs.svg#icon-ukraine"></use>
@@ -84,44 +121,60 @@ const renderUkrLangBtn = ()=> {
         </svg>
       </button>
     </div>
-  `;
+  `);
 
   catchMouseEvent();
 
-  const elRefs1 = findElAndAddEventListener();
+  const elRefs1 = findEl();
 
-  elRefs1.ukrainianLangBtn.classList.add("active-language");
-  elRefs1.englishLangBtn.classList.remove("active-language");
+  elRefs1.ukrainianLangBtn.forEach((el)=>el.classList.add("active-language"));
+  elRefs1.englishLangBtn.forEach((el) => el.classList.remove("active-language"));
+
+  location.href = window.location.pathname + '#' + "ua";
+  changeLang();
 }
 
 function changeActiveLangBtn (event){
   const clickedButton = event.target.closest('.language-button');
 
-  const elRefs0 = findElAndAddEventListener();
+  const elRefs0 = findEl();
 
-  if (clickedButton === elRefs0.englishLangBtn && !elRefs0.englishLangBtn.classList.contains("active-language")) {
+  const ukBtnsArr = Array.from(elRefs0.ukrainianLangBtn)
+  const enBtnsArr = Array.from(elRefs0.englishLangBtn)
+
+  const oneOfUkrainianLangBtnClickedStatusArr = Array.from(elRefs0.ukrainianLangBtn).map((el) => el === clickedButton)
+  const isSomeUkrainianBtnClicked = oneOfUkrainianLangBtnClickedStatusArr.some((el) => el === true);
+
+  const oneOfEnglishLangBtnClickedStatusArr = Array.from(elRefs0.englishLangBtn).map((el) => el === clickedButton)
+  const isSomeEnglishBtnClicked = oneOfEnglishLangBtnClickedStatusArr.some((el) => el === true);
+
+
+  if (isSomeEnglishBtnClicked && !enBtnsArr.some((el) =>  el.classList.contains("active-language"))) {
     console.log("Clicked on English button");
 
     renderEngLangBtn();
+    
 
-  } else if (clickedButton === elRefs0.ukrainianLangBtn && !elRefs0.ukrainianLangBtn.classList.contains("active-language")) {
+  } else if (isSomeUkrainianBtnClicked && !ukBtnsArr.some((el) => el.classList.contains("active-language"))) {
     console.log("Clicked on Ukrainian button");
 
-    elRefs0.ukrainianLangBtn.classList.add("active-language");
-    elRefs0.englishLangBtn.classList.remove("active-language");
+    elRefs0.ukrainianLangBtn.forEach((el)=>el.classList.add("active-language"));
+    elRefs0.englishLangBtn.forEach((el) => el.classList.remove("active-language"));
 
     renderUkrLangBtn();
   }
 
-  const refs1 = findElAndAddEventListener();
+  const refs1 = findEl();
 
-  refs1.englishLangBtn.addEventListener("click", changeActiveLangBtn);
-  refs1.ukrainianLangBtn.addEventListener("click", changeActiveLangBtn);
+  refs1.englishLangBtn.forEach((el) => el.addEventListener("click", changeActiveLangBtn));
+  refs1.ukrainianLangBtn.forEach((el)=>el.addEventListener("click", changeActiveLangBtn));
 }
+
+location.href = window.location.pathname + '#' + "ua";
 
 catchMouseEvent();
 
-const refs1 = findElAndAddEventListener();
+const refs1 = findEl();
 
-refs1.englishLangBtn.addEventListener("click", changeActiveLangBtn);
-refs1.ukrainianLangBtn.addEventListener("click", changeActiveLangBtn);
+refs1.englishLangBtn.forEach((el) => el.addEventListener("click", changeActiveLangBtn));
+refs1.ukrainianLangBtn.forEach((el) => el.addEventListener("click", changeActiveLangBtn));

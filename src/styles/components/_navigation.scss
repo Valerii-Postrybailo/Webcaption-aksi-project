@@ -89,13 +89,13 @@
   }
 }
 
-.language-button--mobile-menu {
-  margin: 15px;
-  margin-top: auto;
+// .language-button--mobile-menu {
+//   margin: 15px;
+//   margin-top: auto;
 
-  width: 50px;
-  height: 50px;
-}
+//   width: 50px;
+//   height: 50px;
+// }
 
 .tel-list {
   display: none;
@@ -126,4 +126,11 @@
   &__link--footer {
     color: $main-white-color;
   }
+}
+
+.mob-tel-list {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: auto;
 }
