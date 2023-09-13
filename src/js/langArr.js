@@ -280,6 +280,11 @@ const langArr = {
     "en":"send",
   },
 
+  "sand-btn2":{
+    "ua":"замовити",
+    "en":"order",
+  },
+
   "clothes-cleaning-modal":{
     "ua":"Чистка одягу та текстильних виробів",
     "en":"Cleaning of clothes and textiles",

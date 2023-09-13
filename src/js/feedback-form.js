@@ -1,6 +1,6 @@
-const feedbackForm = document.querySelector(".user-communication-form");
+const feedbackForm = document.querySelectorAll(".user-communication-form");
 
-feedbackForm.addEventListener("submit", handleSubmit);
+feedbackForm.forEach((el) => el.addEventListener("submit", handleSubmit));
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -9,7 +9,13 @@ function handleSubmit(event) {
   } = event.currentTarget;
 
   if (name.value === "" || email.value === "" || questions.value === "") {
-    return alert("Заповніть всі пусті поля!");
+    let hash = window.location.hash;
+    hash = hash.slice(1);
+    if (hash === "en"){
+      return alert("Complete all empty fields!");
+    }else{
+      return alert("Заповніть всі пусті поля!");
+    }
   }
 
   console.log(`Name: ${name.value}, Email: ${email.value}, Questions: ${questions.value}`);

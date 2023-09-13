@@ -17,6 +17,12 @@
   transition: background-color 80ms $animation-timer,
     color 80ms $animation-timer;
 }
+
+.button--order-modal {
+  display: flex;
+  margin: 0 auto;
+}
+
 .button:hover {
   color: white;
   box-shadow: 0px 4px 4px rgb(0, 0, 38);

@@ -1,4 +1,3 @@
-
 .header {
   position: relative;
   padding-top: 150px;
@@ -6,79 +5,78 @@
 
   background-color: $main-bg-color;
 
-  @media screen and (min-width:768px){
-    padding-top:200px ;
-    padding-bottom: 160px;
+  @media screen and (min-width: 768px) {
+    padding-top: 200px;
+    padding-bottom: 60px;
   }
 
-  @media screen and (min-width:1350px){
+  @media screen and (min-width: 1350px) {
     padding-top: 300px;
-    padding-bottom: 310px;
+    padding-bottom: 180px;
   }
 }
 
 // ------------ABOVE-HEADER-LINE---------------
 
-.above-header-line{
-  padding-top:8px;
+.above-header-line {
+  padding-top: 8px;
   padding-bottom: 8px;
 
   background-color: $main-color;
 
-  &__container{
+  &__container {
     display: flex;
   }
 }
 
-
 //-------------HERO------------
 
-.hero-main-info{
+.hero-main-info {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: 100%;
 
-  @media screen and (min-width:768px){
+  @media screen and (min-width: 768px) {
     width: 545px;
   }
 
-  @media screen and (min-width:1350px){
+  @media screen and (min-width: 1350px) {
     display: block;
   }
-  
-  &__title{
+
+  &__title {
     margin-bottom: 20px;
 
     font-weight: 900;
     font-size: 30px;
     line-height: 35px;
     text-transform: uppercase;
-    
+
     color: $main-color;
   }
 
-  &__text{
+  &__text {
     margin-bottom: 30px;
 
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-size: 18px;
     line-height: 30px;
-    
+
     color: $main-text-color;
   }
 
-  &__button{
+  &__button {
     padding: 15px 74px 15px 74px;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    
+
     text-align: center;
     text-transform: uppercase;
-    
+
     color: $main-color;
 
     border: 2px solid $main-color;
@@ -86,65 +84,64 @@
 
     background-color: transparent;
 
-    &:hover{
-      color:$main-white-color;
+    &:hover {
+      color: $main-white-color;
       box-shadow: 0px 4px 4px rgb(0, 0, 15%);
       background-color: $main-color;
     }
   }
 }
 
-.hero-part{
+.hero-part {
   position: relative;
 }
 
-.hero-picture__first{
+.hero-picture__first {
   display: none;
 
-  @media screen and (min-width:1350px){
+  @media screen and (min-width: 1350px) {
     position: absolute;
     z-index: 2;
 
     display: block;
-    
+
     left: 632px;
     top: -72px;
   }
 }
 
-.hero-picture__second{
-    position: absolute;
-    z-index: 1;
+.hero-picture__second {
+  position: absolute;
+  z-index: 1;
 
-    display: none;
+  display: none;
 
-    left: 550px;
-    top: -60px;
+  left: 550px;
+  top: -60px;
 
-  @media screen and (min-width:768px){
+  @media screen and (min-width: 768px) {
     display: block;
   }
 
-  @media screen and (min-width:1350px){
-      top: -60px;
-      left: 1085px;
+  @media screen and (min-width: 1350px) {
+    top: -60px;
+    left: 1085px;
   }
 }
 
-.hero-picture__round{
+.hero-picture__round {
   display: none;
 
-  @media screen and (min-width:1350px){
+  @media screen and (min-width: 1350px) {
     position: absolute;
     display: block;
 
     left: 730px;
     top: -142px;
-  } 
+  }
 }
 
-
-.menu-open-btn{
+.menu-open-btn {
   display: block;
   display: flex;
   padding: 0;
@@ -154,18 +151,19 @@
 
   background-color: transparent;
 
-  @media screen and (min-width:1350px){
+  @media screen and (min-width: 1350px) {
     display: none;
   }
 
-  &__burger-menu{
-  fill: $main-color;
+  &__burger-menu {
+    fill: $main-color;
 
-  cursor: pointer;
-  
-  transition: fill 150ms $animation-timer;
+    cursor: pointer;
 
-    &:hover, :focus{
+    transition: fill 150ms $animation-timer;
+
+    &:hover,
+    :focus {
       fill: $hover-color;
     }
   }

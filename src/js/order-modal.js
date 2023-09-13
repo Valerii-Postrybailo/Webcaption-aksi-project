@@ -2,14 +2,14 @@
   const refs = {
       openOrderModalBtn: document.querySelector(".open-order-modal-btn"),
       closeOrderModalBtn: document.querySelector(".order-modal-close-btn"),
-      secondCloseOrderModalBtn: document.querySelector(".order-modal-second-close-btn"),
-      order: document.querySelector("[order-modal-price]"),
+      // secondCloseOrderModalBtn: document.querySelector(".order-modal-second-close-btn"),
+      order: document.querySelector(".order-bckd"),
       orderBackdrop: document.querySelector(".order-bckd")
   };
 
   refs.openOrderModalBtn.addEventListener("click", toggleMenu);
   refs.closeOrderModalBtn.addEventListener("click", toggleMenu);
-  refs.secondCloseOrderModalBtn.addEventListener("click", toggleMenu);
+  // refs.secondCloseOrderModalBtn.addEventListener("click", toggleMenu);
 
   refs.orderBackdrop.addEventListener("click", onCloseModalByBackdropClick);
 

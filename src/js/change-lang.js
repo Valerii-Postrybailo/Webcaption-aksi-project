@@ -18,15 +18,15 @@ const changeLang = () =>{
   let hash = window.location.hash;
   hash = hash.slice(1);
 
-  const nameInputPlaceholder = document.querySelector(".user-communication-form__name-field");
-  const messageInputPlaceholder = document.querySelector(".user-communication-form__textarea-for-questions")
+  const nameInputPlaceholder = document.querySelectorAll(".user-communication-form__name-field");
+  const messageInputPlaceholder = document.querySelectorAll(".user-communication-form__textarea-for-questions")
 
   if (hash === "en"){
-    nameInputPlaceholder.placeholder= "Your name";
-    messageInputPlaceholder.placeholder = "Message";
+    nameInputPlaceholder.forEach(el => {el.placeholder = "Your name"});
+    messageInputPlaceholder.forEach(el => {el.placeholder = "Message and other contact info"}) ;
   }else{
-    nameInputPlaceholder.placeholder= "Ваше ім’я";
-    messageInputPlaceholder.placeholder = "Повідомлення";
+    nameInputPlaceholder.forEach(el => {el.placeholder = "Ваше ім’я"}); 
+    messageInputPlaceholder.forEach(el => {el.placeholder = "Повідомлення та інша контактна інформація"});
 
   }
 

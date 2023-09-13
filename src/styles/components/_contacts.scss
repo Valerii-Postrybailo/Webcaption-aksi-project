@@ -1,19 +1,24 @@
-.map__google-map-container{
+.map__google-map-container {
   height: 500px;
 }
 
-.map__map-title{
+.map__google-map {
+  width: 100%;
+  height: 100%;
+}
+
+.map__map-title {
   text-align: center;
 
   padding: 5px 0 10px 0;
 
   font-size: 14px;
-  line-height: calc(20/14);
+  line-height: calc(20 / 14);
 
   color: $secondary-text-color;
 }
 
-.address-btn-list{
+.address-btn-list {
   position: relative;
 
   display: flex;
@@ -26,33 +31,32 @@
 
   &::after {
     position: absolute;
-  
+
     content: "";
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color:$main-bg-color;
+    background-color: $main-bg-color;
   }
-  @media screen and (min-width:768px){
+  @media screen and (min-width: 768px) {
     flex-wrap: wrap;
     flex-direction: row;
-    
   }
 
-  @media screen and (min-width:1350px){
+  @media screen and (min-width: 1350px) {
     flex-wrap: nowrap;
   }
 
-  &__item:not(:last-child){
+  &__item:not(:last-child) {
     margin-bottom: 10px;
 
-    @media screen and (min-width:1350px){
+    @media screen and (min-width: 1350px) {
       margin-bottom: 0px;
     }
   }
 }
 
-.address-btn{  
+.address-btn {
   position: relative;
   z-index: 1;
 
@@ -63,8 +67,8 @@
 
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(30/16);
-  
+  line-height: calc(30 / 16);
+
   border: none;
 
   color: $main-color;
@@ -72,33 +76,30 @@
 
   cursor: pointer;
 
-  
-
-  &:hover{
+  &:hover {
     color: $hover-color;
 
     &::after {
       position: absolute;
-    
+
       content: "";
       bottom: 0;
       width: 100%;
       height: 3px;
       background-color: $hover-color;
-    
-      }
+    }
   }
 
-  &__img{
+  &__img {
     margin-right: 10px;
   }
 
-  &--active{
+  &--active {
     color: $hover-color;
-    
+
     &::after {
       position: absolute;
-    
+
       content: "";
       bottom: 0;
       width: 100%;
@@ -107,6 +108,3 @@
     }
   }
 }
-
-
-
